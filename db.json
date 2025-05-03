@@ -4496,6 +4496,78 @@
       ],
       "createdAt": "2024-06-06T16:45:17.367Z",
       "updatedAt": "2025-05-02T11:27:57.215Z"
+    },
+    {
+      "id": "06c39cf7-fa86-457d-8c31-a2c482be76bb",
+      "email": "hoang123@gmail.com",
+      "passwordHash": "$2b$10$c5jtA4e6g9ceyXv/y..a5ug4sQzWnkP0mHS.sljVeq4idDZOsO47m",
+      "firstName": "Nguyen Huy",
+      "lastName": "Hoang",
+      "role": "customer",
+      "verificationStatus": "pending",
+      "createdAt": "2025-05-03T13:41:07.336Z",
+      "updatedAt": "2025-05-03T13:41:07.336Z",
+      "lastLogin": "2025-05-03T13:41:07.336Z"
+    },
+    {
+      "id": "08afd213-6b8a-49a1-a657-9d36db2d71c2",
+      "email": "Huyhoang@gmail.com",
+      "passwordHash": "$2b$10$d4Y2ocb55TU/bdB4m0bubO8jFcYbWQQ.PN7nEkUcy1ureFcyf4OxG",
+      "firstName": "Nguyễn",
+      "lastName": "Hoàng",
+      "role": "customer",
+      "verificationStatus": "pending",
+      "createdAt": "2025-05-03T13:44:19.744Z",
+      "updatedAt": "2025-05-03T13:44:19.744Z",
+      "lastLogin": "2025-05-03T13:44:19.744Z"
+    },
+    {
+      "id": "1fef99a8-b602-4822-a303-171e19a89583",
+      "email": "hoang1234@gmail.com",
+      "passwordHash": "$2b$10$P3/i9fPJs8H9TPT4bZ5wx.j5VKuLGFt5XTD9eemZaQqZcve.E4syW",
+      "firstName": "Nguyen Huy",
+      "lastName": "Hoang",
+      "role": "customer",
+      "verificationStatus": "pending",
+      "createdAt": "2025-05-03T13:48:02.985Z",
+      "updatedAt": "2025-05-03T13:48:02.985Z",
+      "lastLogin": "2025-05-03T13:48:02.985Z"
+    },
+    {
+      "id": "f6ec1859-75d7-4c9f-a271-96efbb039931",
+      "email": "hoang12345@gmail.com",
+      "passwordHash": "$2b$10$/KXXeEzS.K.JpkADCbX66OSAri71Jt3ZuxEMuqp4E3vpgBsac6pFe",
+      "firstName": "Nguyen Huy",
+      "lastName": "Hoang",
+      "role": "customer",
+      "verificationStatus": "pending",
+      "createdAt": "2025-05-03T13:49:02.603Z",
+      "updatedAt": "2025-05-03T13:49:02.604Z",
+      "lastLogin": "2025-05-03T13:49:02.604Z"
+    },
+    {
+      "id": "c3adff0b-cfed-49b5-bbf8-a97049e98914",
+      "email": "hoang1235@gmail.com",
+      "passwordHash": "$2b$10$xO0Ezs7teZqvefA9.33OFOt3pO2mofeY0es0/DETZJUj0R8rsPhjG",
+      "firstName": "Nguyen Huy",
+      "lastName": "Hoang",
+      "role": "customer",
+      "verificationStatus": "pending",
+      "createdAt": "2025-05-03T13:50:52.016Z",
+      "updatedAt": "2025-05-03T13:50:52.016Z",
+      "lastLogin": "2025-05-03T13:50:52.016Z"
+    },
+    {
+      "id": "9f0800ac-98e2-4875-9d31-b3e97d137ce6",
+      "email": "hoang12354@gmail.com",
+      "passwordHash": "$2b$10$KPtEYE0DkY4fY9GDqymBFuENZvkoOaxbo3bouafq6H3lQV0LFMsma",
+      "firstName": "Nguyen Huy",
+      "lastName": "Hoang",
+      "role": "customer",
+      "verificationStatus": "pending",
+      "createdAt": "2025-05-03T13:54:32.862Z",
+      "updatedAt": "2025-05-03T13:54:32.862Z",
+      "lastLogin": "2025-05-03T13:54:32.862Z"
     }
   ],
   "carts": [
@@ -4708,6 +4780,48 @@
       "items": [],
       "createdAt": "2024-10-23T07:18:44.658Z",
       "updatedAt": "2025-05-02T19:10:41.119Z"
+    },
+    {
+      "id": "168e7a7e-644b-46e1-80c0-6eddafc2e301",
+      "userId": "06c39cf7-fa86-457d-8c31-a2c482be76bb",
+      "items": [],
+      "createdAt": "2025-05-03T13:41:07.338Z",
+      "updatedAt": "2025-05-03T13:41:07.339Z"
+    },
+    {
+      "id": "d60667e0-fa32-4a2f-831e-7fb0ee3c7136",
+      "userId": "08afd213-6b8a-49a1-a657-9d36db2d71c2",
+      "items": [],
+      "createdAt": "2025-05-03T13:44:19.746Z",
+      "updatedAt": "2025-05-03T13:44:19.746Z"
+    },
+    {
+      "id": "a0db3f0f-ea49-4e85-95e7-5416691fcafd",
+      "userId": "1fef99a8-b602-4822-a303-171e19a89583",
+      "items": [],
+      "createdAt": "2025-05-03T13:48:02.987Z",
+      "updatedAt": "2025-05-03T13:48:02.987Z"
+    },
+    {
+      "id": "50ef062c-4818-40c2-a1c4-ec02174ae01f",
+      "userId": "f6ec1859-75d7-4c9f-a271-96efbb039931",
+      "items": [],
+      "createdAt": "2025-05-03T13:49:02.606Z",
+      "updatedAt": "2025-05-03T13:49:02.606Z"
+    },
+    {
+      "id": "6889cd1e-b147-4c5b-8b15-bdb36d8b880c",
+      "userId": "c3adff0b-cfed-49b5-bbf8-a97049e98914",
+      "items": [],
+      "createdAt": "2025-05-03T13:50:52.018Z",
+      "updatedAt": "2025-05-03T13:50:52.018Z"
+    },
+    {
+      "id": "f3757018-84d7-4dc9-b2a6-2cae4b823c66",
+      "userId": "9f0800ac-98e2-4875-9d31-b3e97d137ce6",
+      "items": [],
+      "createdAt": "2025-05-03T13:54:32.865Z",
+      "updatedAt": "2025-05-03T13:54:32.865Z"
     }
   ],
   "favourites": [
@@ -5293,6 +5407,13 @@
       ],
       "createdAt": "2024-07-19T10:18:47.057Z",
       "updatedAt": "2025-05-02T22:42:06.813Z"
+    },
+    {
+      "id": "23d9989d-8d29-462d-b9c8-c6aeed8b1521",
+      "userId": "9f0800ac-98e2-4875-9d31-b3e97d137ce6",
+      "items": [],
+      "createdAt": "2025-05-03T13:54:32.881Z",
+      "updatedAt": "2025-05-03T13:54:32.881Z"
     }
   ],
   "orders": [
@@ -6020,5 +6141,92 @@
   ],
   "prescriptions": [],
   "reviews": [],
-  "wishlist": []
+  "wishlist": [],
+  "tokens": [
+    {
+      "id": "41589be9-7ef4-4569-83ff-6e50693a9062",
+      "userId": "06c39cf7-fa86-457d-8c31-a2c482be76bb",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA2YzM5Y2Y3LWZhODYtNDU3ZC04YzMxLWEyYzQ4MmJlNzZiYiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjI3OTY2NywiZXhwIjoxNzQ2MjgzMjY3fQ.PxuIT-cRO0x-ZXzu5wyQoQH5dxISCRjfZPY_sR7MqEk",
+      "createdAt": "2025-05-03T20:41:07.364Z",
+      "expiresAt": "2025-05-03T21:41:07.364Z",
+      "isValid": true
+    },
+    {
+      "id": "b4d4a2ad-9289-43b8-8ad9-7a6c1eba4b26",
+      "userId": "08afd213-6b8a-49a1-a657-9d36db2d71c2",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA4YWZkMjEzLTZiOGEtNDlhMS1hNjU3LTlkMzZkYjJkNzFjMiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjI3OTg1OSwiZXhwIjoxNzQ2MjgzNDU5fQ.F3ZKJCSySyqtjNOeoOP6W_joQF02ANc1DkMR9YE8DQg",
+      "createdAt": "2025-05-03T20:44:19.776Z",
+      "expiresAt": "2025-05-03T21:44:19.776Z",
+      "isValid": true
+    },
+    {
+      "id": "24680728-255c-4917-ab3b-1cc01fec4229",
+      "userId": "1fef99a8-b602-4822-a303-171e19a89583",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjFmZWY5OWE4LWI2MDItNDgyMi1hMzAzLTE3MWUxOWE4OTU4MyIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjI4MDA4MywiZXhwIjoxNzQ2MjgzNjgzfQ.n2ndFoOM8XiwF5LLK3H7wqvETw5MR0sv8enb1R0bXAg",
+      "createdAt": "2025-05-03T20:48:03.016Z",
+      "expiresAt": "2025-05-03T21:48:03.016Z",
+      "isValid": true
+    },
+    {
+      "id": "d6d96848-2e41-49b1-a4bf-ebaf4754add1",
+      "userId": "f6ec1859-75d7-4c9f-a271-96efbb039931",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImY2ZWMxODU5LTc1ZDctNGM5Zi1hMjcxLTk2ZWZiYjAzOTkzMSIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjI4MDE0MiwiZXhwIjoxNzQ2MjgzNzQyfQ.tT9xKQwwh3IpnMypXwZYe1HXZ7dbnz-96xzwYBf5ioI",
+      "createdAt": "2025-05-03T20:49:02.634Z",
+      "expiresAt": "2025-05-03T21:49:02.634Z",
+      "isValid": true
+    },
+    {
+      "id": "41aef426-d6cf-4c90-904f-1a417220e720",
+      "userId": "c3adff0b-cfed-49b5-bbf8-a97049e98914",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImMzYWRmZjBiLWNmZWQtNDliNS1iYmY4LWE5NzA0OWU5ODkxNCIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjI4MDI1MiwiZXhwIjoxNzQ2MjgzODUyfQ.BHLzqJ70xo12JcZagRyvs05snfxwBjYnhqnN9uznKiY",
+      "createdAt": "2025-05-03T20:50:52.053Z",
+      "expiresAt": "2025-05-03T21:50:52.053Z",
+      "isValid": true
+    },
+    {
+      "id": "ebe08515-666a-4f54-9661-91e4d33d47ec",
+      "userId": "9f0800ac-98e2-4875-9d31-b3e97d137ce6",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlmMDgwMGFjLTk4ZTItNDg3NS05ZDMxLWIzZTk3ZDEzN2NlNiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjI4MDQ3MiwiZXhwIjoxNzQ2Mjg0MDcyfQ.2B3ERKY8MEoqfnqYKqtfSGCeJibyCpkAW83CVqzoXsQ",
+      "createdAt": "2025-05-03T20:54:32.899Z",
+      "expiresAt": "2025-05-03T21:54:32.899Z",
+      "isValid": true
+    }
+  ],
+  "favorites": [
+    {
+      "id": "838cee56-8379-402b-b680-dda6f48d3f3b",
+      "userId": "06c39cf7-fa86-457d-8c31-a2c482be76bb",
+      "items": [],
+      "createdAt": "2025-05-03T13:41:07.350Z",
+      "updatedAt": "2025-05-03T13:41:07.350Z"
+    },
+    {
+      "id": "4fca0b08-1e86-4720-964b-1070a6efabb0",
+      "userId": "08afd213-6b8a-49a1-a657-9d36db2d71c2",
+      "items": [],
+      "createdAt": "2025-05-03T13:44:19.761Z",
+      "updatedAt": "2025-05-03T13:44:19.761Z"
+    },
+    {
+      "id": "92a2e01a-ed00-4119-a3a3-a747bd416486",
+      "userId": "1fef99a8-b602-4822-a303-171e19a89583",
+      "items": [],
+      "createdAt": "2025-05-03T13:48:03.000Z",
+      "updatedAt": "2025-05-03T13:48:03.000Z"
+    },
+    {
+      "id": "f36f25c2-1408-4662-ac1f-fac9c7a0bde4",
+      "userId": "f6ec1859-75d7-4c9f-a271-96efbb039931",
+      "items": [],
+      "createdAt": "2025-05-03T13:49:02.618Z",
+      "updatedAt": "2025-05-03T13:49:02.618Z"
+    },
+    {
+      "id": "3395fa27-ed65-4e0d-9e3b-ef3fd287a4e6",
+      "userId": "c3adff0b-cfed-49b5-bbf8-a97049e98914",
+      "items": [],
+      "createdAt": "2025-05-03T13:50:52.036Z",
+      "updatedAt": "2025-05-03T13:50:52.036Z"
+    }
+  ]
 }

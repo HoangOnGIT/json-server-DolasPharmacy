@@ -160,7 +160,7 @@ server.post("/api/register", (req, res) => {
   };
 
   // Add the favorites list to the database
-  router.db.get("favorites").push(newFavorites).write();
+  router.db.get("favourites").push(newFavorites).write();
 
   // Generate a token for the new user
   const token = jwt.sign({ id: newUser.id, role: newUser.role }, SECRET_KEY, {
