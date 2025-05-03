@@ -18,7 +18,7 @@ server.use(middlewares);
 // Important: Add body-parser middleware BEFORE defining routes
 server.use(jsonServer.bodyParser);
 
-// Initialize tokens array in db.json if it doesn't exist
+// Initialize tokens, carts, and favorites arrays in db.json if they don't exist
 server.use((req, res, next) => {
   const db = router.db;
   if (!db.has("tokens").value()) {
@@ -28,6 +28,11 @@ server.use((req, res, next) => {
   // Initialize carts array if it doesn't exist
   if (!db.has("carts").value()) {
     db.set("carts", []).write();
+  }
+
+  // Initialize favorites array if it doesn't exist
+  if (!db.has("favorites").value()) {
+    db.set("favorites", []).write();
   }
 
   next();
@@ -144,6 +149,18 @@ server.post("/api/register", (req, res) => {
 
   // Add the cart to the database
   router.db.get("carts").push(newCart).write();
+
+  // Create an empty favorites list for the new user
+  const newFavorites = {
+    id: generateId(),
+    userId: newUser.id,
+    items: [],
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  };
+
+  // Add the favorites list to the database
+  router.db.get("favorites").push(newFavorites).write();
 
   // Generate a token for the new user
   const token = jwt.sign({ id: newUser.id, role: newUser.role }, SECRET_KEY, {
