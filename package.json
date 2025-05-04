@@ -18,8 +18,8 @@
     "bcrypt": "^5.0.1",
     "json-server": "^0.17.0",
     "jsonwebtoken": "^8.5.1",
-    "query-string": "^7.1.1",
-    "@heroicons/react": "^2.2.0"
+    "node-fetch": "^3.3.2",
+    "query-string": "^7.1.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
