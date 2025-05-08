@@ -3286,7 +3286,7 @@
       "dateOfBirth": "1990-01-01",
       "role": "admin",
       "verificationStatus": "verified",
-      "lastLogin": "2025-05-02T17:34:12.592Z",
+      "lastLogin": "2025-05-08T06:54:03.830Z",
       "addresses": [
         {
           "id": "8b304856-c586-4f18-8845-f4beef0735b7",
@@ -4519,7 +4519,7 @@
       "verificationStatus": "pending",
       "createdAt": "2025-05-03T13:44:19.744Z",
       "updatedAt": "2025-05-03T13:44:19.744Z",
-      "lastLogin": "2025-05-03T13:44:19.744Z"
+      "lastLogin": "2025-05-03T16:42:52.232Z"
     },
     {
       "id": "1fef99a8-b602-4822-a303-171e19a89583",
@@ -4568,15 +4568,116 @@
       "createdAt": "2025-05-03T13:54:32.862Z",
       "updatedAt": "2025-05-03T13:54:32.862Z",
       "lastLogin": "2025-05-03T13:54:32.862Z"
+    },
+    {
+      "id": "8f3f7506-3987-4927-afdc-ac3c48b88b82",
+      "email": "Huyhoang123@gmail.com",
+      "passwordHash": "$2b$10$VWbTeemfjKdmd2rSfJbzIevT13xSbI.clVJRMFRirGcuOmsyeQtau",
+      "firstName": "Nguyễn",
+      "lastName": "Hoang",
+      "role": "customer",
+      "verificationStatus": "pending",
+      "createdAt": "2025-05-03T16:04:52.907Z",
+      "updatedAt": "2025-05-03T16:04:52.907Z",
+      "lastLogin": "2025-05-03T16:04:52.907Z"
+    },
+    {
+      "id": "74aa85df-4f91-4edd-93bb-da8d529ef57f",
+      "email": "test123@gmail.com",
+      "passwordHash": "$2b$10$k7pky3s4Rr2TMe542qTgr.8Nxlz654LtUJeXMrFxqPtpylKETNG.y",
+      "firstName": "Nguyễn",
+      "lastName": "Hoang",
+      "role": "customer",
+      "verificationStatus": "pending",
+      "createdAt": "2025-05-03T16:43:41.365Z",
+      "updatedAt": 1746290725588,
+      "lastLogin": "2025-05-03T17:02:32.085Z",
+      "addresses": [
+        {
+          "type": "shipping",
+          "isPrimary": true,
+          "street": "123",
+          "city": "Tỉnh Hà Giang",
+          "state": "Quận Ba Đình",
+          "country": "Việt Nam"
+        },
+        {
+          "type": "shipping",
+          "isPrimary": true,
+          "street": "123",
+          "city": "Thành phố Hà Nội",
+          "state": "Quận Tây Hồ",
+          "country": "Việt Nam"
+        },
+        {
+          "type": "shipping",
+          "isPrimary": false,
+          "street": "123",
+          "city": "Tỉnh Cao Bằng",
+          "state": "Quận Tây Hồ",
+          "country": "Việt Nam"
+        }
+      ]
     }
   ],
   "carts": [
     {
       "id": "ecb306db-5d06-4612-8696-e50b973a142e",
       "userId": "aabb12fd-3e65-4800-9971-6502ab61dc2a",
-      "items": [],
+      "items": [
+        {
+          "id": "4fe54227-f077-40eb-bc94-ecbf54acfc25",
+          "productId": "4fe54227-f077-40eb-bc94-ecbf54acfc25",
+          "name": "Cồn giảm đau Dược phẩm 272",
+          "salePrice": 70580000,
+          "basePrice": 94110000,
+          "quantity": 1,
+          "images": [
+            {
+              "id": "37fd48f4-3f3a-4f43-8e84-b8a4b8de61be",
+              "url": "https://picsum.photos/seed/142/500/500",
+              "alt": "Cồn giảm đau Dược phẩm 272 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "id": "53d328d6-c64c-492e-b35d-8ac254819bf2",
+              "url": "https://picsum.photos/seed/429/500/500",
+              "alt": "Cồn giảm đau Dược phẩm 272 - Hình chi tiết",
+              "isPrimary": false,
+              "sortOrder": 1
+            }
+          ],
+          "variant": ""
+        },
+        {
+          "id": "03d656cd-5073-47ba-9c02-03d0487af046",
+          "productId": "03d656cd-5073-47ba-9c02-03d0487af046",
+          "name": "Dung dịch thảo dược OPC Pharma 094",
+          "salePrice": 84040000,
+          "basePrice": 84040000,
+          "quantity": 1,
+          "images": [
+            {
+              "id": "735af51d-88f4-4a22-8899-810686e4f873",
+              "url": "https://picsum.photos/seed/572/500/500",
+              "alt": "Dung dịch thảo dược OPC Pharma 094 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "id": "3ee25f1b-5eaf-453e-a60b-f3f4482dde37",
+              "url": "https://picsum.photos/seed/9/500/500",
+              "alt": "Dung dịch thảo dược OPC Pharma 094 - Hình chi tiết",
+              "isPrimary": false,
+              "sortOrder": 1
+            }
+          ],
+          "variant": ""
+        }
+      ],
       "createdAt": "2024-08-04T22:12:20.230Z",
-      "updatedAt": "2025-05-02T08:06:35.579Z"
+      "updatedAt": 1746687463929
     },
     {
       "id": "d7718a2d-6ede-4415-b8df-b16e888b5e97",
@@ -4822,6 +4923,46 @@
       "items": [],
       "createdAt": "2025-05-03T13:54:32.865Z",
       "updatedAt": "2025-05-03T13:54:32.865Z"
+    },
+    {
+      "id": "71fc300a-3475-475c-bb7d-885c35049433",
+      "userId": "8f3f7506-3987-4927-afdc-ac3c48b88b82",
+      "items": [
+        {
+          "id": "4fe54227-f077-40eb-bc94-ecbf54acfc25",
+          "productId": "4fe54227-f077-40eb-bc94-ecbf54acfc25",
+          "name": "Cồn giảm đau Dược phẩm 272",
+          "salePrice": 70580000,
+          "basePrice": 94110000,
+          "quantity": 1,
+          "images": [
+            {
+              "id": "37fd48f4-3f3a-4f43-8e84-b8a4b8de61be",
+              "url": "https://picsum.photos/seed/142/500/500",
+              "alt": "Cồn giảm đau Dược phẩm 272 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "id": "53d328d6-c64c-492e-b35d-8ac254819bf2",
+              "url": "https://picsum.photos/seed/429/500/500",
+              "alt": "Cồn giảm đau Dược phẩm 272 - Hình chi tiết",
+              "isPrimary": false,
+              "sortOrder": 1
+            }
+          ],
+          "variant": "giảm đau - Loại 60"
+        }
+      ],
+      "createdAt": "2025-05-03T16:04:52.909Z",
+      "updatedAt": 1746289531369
+    },
+    {
+      "id": "e7aea2e1-5f0d-4258-ae8b-89de3d033f56",
+      "userId": "74aa85df-4f91-4edd-93bb-da8d529ef57f",
+      "items": [],
+      "createdAt": "2025-05-03T16:43:41.367Z",
+      "updatedAt": 1746291741799
     }
   ],
   "favourites": [
@@ -5414,6 +5555,20 @@
       "items": [],
       "createdAt": "2025-05-03T13:54:32.881Z",
       "updatedAt": "2025-05-03T13:54:32.881Z"
+    },
+    {
+      "id": "50dea391-2032-469f-bc20-25e0bfb9696f",
+      "userId": "8f3f7506-3987-4927-afdc-ac3c48b88b82",
+      "items": [],
+      "createdAt": "2025-05-03T16:04:52.924Z",
+      "updatedAt": "2025-05-03T16:04:52.924Z"
+    },
+    {
+      "id": "d1b3e885-540c-4cf5-bde4-9497dc5f4ca5",
+      "userId": "74aa85df-4f91-4edd-93bb-da8d529ef57f",
+      "items": [],
+      "createdAt": "2025-05-03T16:43:41.379Z",
+      "updatedAt": 1746291695326
     }
   ],
   "orders": [
@@ -5669,467 +5824,6 @@
       "updatedAt": "2025-05-02T20:29:12.103Z"
     }
   ],
-  "orderItems": [
-    {
-      "id": "5ebf2c10-9830-4127-8e79-b840e7b15c25",
-      "orderId": "e495b1e4-8212-4576-9ffc-53d43520aa2f",
-      "productId": "8e74d064-a794-445e-961b-6b4e9f6be8d3",
-      "productName": "Thực phẩm chức năng da liễu Vimedimex Việt 480",
-      "quantity": 2,
-      "price": 82680000,
-      "total": 165360000
-    },
-    {
-      "id": "506532e1-7ba7-433b-a223-f13055f1452e",
-      "orderId": "e495b1e4-8212-4576-9ffc-53d43520aa2f",
-      "productId": "8e1ca14d-8d0b-48dd-9a46-43b764cea82a",
-      "productName": "Viên dinh dưỡng Dược phẩm 493",
-      "quantity": 5,
-      "price": 62250000,
-      "total": 311250000
-    },
-    {
-      "id": "3ebee6b0-de7a-4b98-a5ed-24b99b05d572",
-      "orderId": "e495b1e4-8212-4576-9ffc-53d43520aa2f",
-      "productId": "616a7c49-c1c0-45f2-9b78-6bed351f44d3",
-      "productName": "Kem da liễu DHG Pharma 560",
-      "quantity": 3,
-      "price": 49810000,
-      "total": 149430000
-    },
-    {
-      "id": "ec8cbde4-0a11-47ca-a99f-aa62ac0a8aaa",
-      "orderId": "e495b1e4-8212-4576-9ffc-53d43520aa2f",
-      "productId": "fc6f3eec-9e17-49ee-b899-5346feaa1fcc",
-      "productName": "Dầu tiêu hóa DHG Pharma 942",
-      "quantity": 3,
-      "price": 4790000,
-      "total": 14370000
-    },
-    {
-      "id": "5aba63e8-49b2-46ce-9827-628cdc7499c4",
-      "orderId": "e495b1e4-8212-4576-9ffc-53d43520aa2f",
-      "productId": "b6dfc9ec-cc33-48d7-8919-8c0b02c6ce7e",
-      "productName": "Dung dịch hô hấp DHG Pharma 625",
-      "quantity": 1,
-      "price": 54440000,
-      "total": 54440000
-    },
-    {
-      "id": "a54ebbfb-2088-4063-baeb-1ac5525822c2",
-      "orderId": "96f5111b-3b36-40ae-948c-d0092f8689ef",
-      "productId": "8b1d646d-38a7-487c-9ca5-c297f801ed04",
-      "productName": "Sirô tiêu hóa Pymepharco 558",
-      "quantity": 2,
-      "price": 94190000,
-      "total": 188380000
-    },
-    {
-      "id": "e5c16d9a-8360-4fa6-b5d1-b15187a32093",
-      "orderId": "2e45ffb3-f305-4109-8fb3-74101e834b85",
-      "productId": "586d8bf0-2c75-47bc-93c2-cd974f0fecdd",
-      "productName": "Bột mắt DHG Pharma 404",
-      "quantity": 2,
-      "price": 41840000,
-      "total": 83680000
-    },
-    {
-      "id": "ed0b9ee6-ccef-41ba-aa33-48ec97f159a4",
-      "orderId": "2e45ffb3-f305-4109-8fb3-74101e834b85",
-      "productId": "6ccac688-4295-4109-96cf-c0da500d68d3",
-      "productName": "Vitamin thảo dược Domesco 690",
-      "quantity": 1,
-      "price": 84190000,
-      "total": 84190000
-    },
-    {
-      "id": "3fc0dbfd-a9f7-46ba-b5b1-1a18c790fa67",
-      "orderId": "42242a38-fc26-4869-8f2a-289e1d0448b9",
-      "productId": "fc6f3eec-9e17-49ee-b899-5346feaa1fcc",
-      "productName": "Dầu tiêu hóa DHG Pharma 942",
-      "quantity": 3,
-      "price": 4790000,
-      "total": 14370000
-    },
-    {
-      "id": "6904d23f-316d-4012-9b56-7dcaea41b994",
-      "orderId": "42242a38-fc26-4869-8f2a-289e1d0448b9",
-      "productId": "0bef078e-831c-43fe-bb5c-0615fb13bff5",
-      "productName": "Sirô thảo dược Dược phẩm 287",
-      "quantity": 3,
-      "price": 34260000,
-      "total": 102780000
-    },
-    {
-      "id": "164c9723-bca6-4130-b9e5-975290556933",
-      "orderId": "42242a38-fc26-4869-8f2a-289e1d0448b9",
-      "productId": "c10464d1-4ba0-4289-a352-d315991814ff",
-      "productName": "Nước mắt OPC Pharma 782",
-      "quantity": 3,
-      "price": 68960000,
-      "total": 206880000
-    },
-    {
-      "id": "a0a85955-3aac-46d5-a0e5-cb3f27c42d84",
-      "orderId": "5db451ca-edf0-410a-b470-751b78de7aee",
-      "productId": "ca1f096d-4071-4162-a851-3418ace42234",
-      "productName": "Dầu tim mạch Dược phẩm 080",
-      "quantity": 5,
-      "price": 59040000,
-      "total": 295200000
-    },
-    {
-      "id": "13387c7f-d938-4f11-b88e-889eca250cc0",
-      "orderId": "5db451ca-edf0-410a-b470-751b78de7aee",
-      "productId": "27bca1e2-691e-4904-9b00-d4ba28a37a31",
-      "productName": "Thực phẩm chức năng tim mạch Công ty 171",
-      "quantity": 2,
-      "price": 23010000,
-      "total": 46020000
-    },
-    {
-      "id": "c5904153-51b3-4d12-bc3a-d2fce36c0758",
-      "orderId": "3a5cbeb4-aac5-47de-86dc-20b7dc0a4cae",
-      "productId": "bc80cbec-3fa9-40c6-adc3-75b10631876d",
-      "productName": "Thực phẩm chức năng da liễu Pymepharco 726",
-      "quantity": 4,
-      "price": 82090000,
-      "total": 328360000
-    },
-    {
-      "id": "e3ad1c74-5e49-49b9-9f24-1fa760e0aa5d",
-      "orderId": "3a5cbeb4-aac5-47de-86dc-20b7dc0a4cae",
-      "productId": "1e09ac8f-e9d6-4fb6-bd4a-091adfffbfa5",
-      "productName": "Thuốc tim mạch Pymepharco 046",
-      "quantity": 2,
-      "price": 88470000,
-      "total": 176940000
-    },
-    {
-      "id": "3d465d6c-1073-492d-8274-9f08cb3671eb",
-      "orderId": "3a5cbeb4-aac5-47de-86dc-20b7dc0a4cae",
-      "productId": "27bca1e2-691e-4904-9b00-d4ba28a37a31",
-      "productName": "Thực phẩm chức năng tim mạch Công ty 171",
-      "quantity": 5,
-      "price": 23010000,
-      "total": 115050000
-    },
-    {
-      "id": "714dc73d-8d0b-4963-b65f-f4e80b5956d2",
-      "orderId": "3a5cbeb4-aac5-47de-86dc-20b7dc0a4cae",
-      "productId": "616a7c49-c1c0-45f2-9b78-6bed351f44d3",
-      "productName": "Kem da liễu DHG Pharma 560",
-      "quantity": 5,
-      "price": 49810000,
-      "total": 249050000
-    },
-    {
-      "id": "d8635eb9-ebfa-44fc-9b6f-8fa10b996870",
-      "orderId": "3a5cbeb4-aac5-47de-86dc-20b7dc0a4cae",
-      "productId": "876b047a-d15b-487e-bc5b-179251d22864",
-      "productName": "Cồn kháng viêm Dược phẩm 447",
-      "quantity": 5,
-      "price": 31180000,
-      "total": 155900000
-    },
-    {
-      "id": "4e0539ff-6654-4bdb-a5c1-0ba9241578f3",
-      "orderId": "cb03b93a-611c-4d44-a721-eda63050de56",
-      "productId": "4fe54227-f077-40eb-bc94-ecbf54acfc25",
-      "productName": "Cồn giảm đau Dược phẩm 272",
-      "quantity": 5,
-      "price": 70580000,
-      "total": 352900000
-    },
-    {
-      "id": "724bd0fc-cff4-4096-91c6-8eafe0c5f873",
-      "orderId": "8c82ac55-c25e-42b6-9411-658fc003254a",
-      "productId": "fc28cb9f-44d1-4beb-98aa-c5b44a49bc0f",
-      "productName": "Nước da liễu Pymepharco 498",
-      "quantity": 4,
-      "price": 18240000,
-      "total": 72960000
-    },
-    {
-      "id": "e55f48ac-ab2a-4953-82b2-819a21a2871d",
-      "orderId": "8c82ac55-c25e-42b6-9411-658fc003254a",
-      "productId": "b4d9d0c9-2312-406b-92d1-bc9c09c05750",
-      "productName": "Dung dịch tim mạch Domesco 380",
-      "quantity": 2,
-      "price": 25710000,
-      "total": 51420000
-    },
-    {
-      "id": "4413f837-3ffa-4d8c-91c4-b8d326afed79",
-      "orderId": "8c82ac55-c25e-42b6-9411-658fc003254a",
-      "productId": "b4d9d0c9-2312-406b-92d1-bc9c09c05750",
-      "productName": "Dung dịch tim mạch Domesco 380",
-      "quantity": 4,
-      "price": 25710000,
-      "total": 102840000
-    },
-    {
-      "id": "0ce8574f-b7b0-4d45-9067-e0aa7e71f49f",
-      "orderId": "8c82ac55-c25e-42b6-9411-658fc003254a",
-      "productId": "a1babaea-4302-4b83-b430-7107e748b4b9",
-      "productName": "Kem tiêu hóa Công ty 008",
-      "quantity": 3,
-      "price": 43090000,
-      "total": 129270000
-    },
-    {
-      "id": "ba6d4151-8097-41f3-80ba-4c03bdfcd8dd",
-      "orderId": "8c82ac55-c25e-42b6-9411-658fc003254a",
-      "productId": "0037c3b7-3f42-4cf2-840c-9bc372036c50",
-      "productName": "Viên mắt Dược phẩm 580",
-      "quantity": 3,
-      "price": 18360000,
-      "total": 55080000
-    },
-    {
-      "id": "2b8dbbf4-1e19-4081-b6e4-c353e83cee25",
-      "orderId": "f9d77ef8-bfdd-4693-9248-cf8cfa816982",
-      "productId": "6ccac688-4295-4109-96cf-c0da500d68d3",
-      "productName": "Vitamin thảo dược Domesco 690",
-      "quantity": 4,
-      "price": 84190000,
-      "total": 336760000
-    },
-    {
-      "id": "ef0f321b-599f-4eab-9269-638f59ce53ba",
-      "orderId": "f9d77ef8-bfdd-4693-9248-cf8cfa816982",
-      "productId": "6e5dab69-55c9-435b-ae9d-d08693dd5bea",
-      "productName": "Vitamin tim mạch Dược phẩm 327",
-      "quantity": 1,
-      "price": 18290000,
-      "total": 18290000
-    },
-    {
-      "id": "8df53fe8-b570-4ed2-ba7f-acb6856dd207",
-      "orderId": "f9d77ef8-bfdd-4693-9248-cf8cfa816982",
-      "productId": "b6dfc9ec-cc33-48d7-8919-8c0b02c6ce7e",
-      "productName": "Dung dịch hô hấp DHG Pharma 625",
-      "quantity": 3,
-      "price": 54440000,
-      "total": 163320000
-    },
-    {
-      "id": "7ff48043-7988-49ef-9926-9cbd2ca5eeb5",
-      "orderId": "f9d77ef8-bfdd-4693-9248-cf8cfa816982",
-      "productId": "1e09ac8f-e9d6-4fb6-bd4a-091adfffbfa5",
-      "productName": "Thuốc tim mạch Pymepharco 046",
-      "quantity": 1,
-      "price": 88470000,
-      "total": 88470000
-    },
-    {
-      "id": "d6e5f5e1-eb7c-44e5-b699-d8033c9a2608",
-      "orderId": "f9d77ef8-bfdd-4693-9248-cf8cfa816982",
-      "productId": "6e5dab69-55c9-435b-ae9d-d08693dd5bea",
-      "productName": "Vitamin tim mạch Dược phẩm 327",
-      "quantity": 4,
-      "price": 18290000,
-      "total": 73160000
-    },
-    {
-      "id": "056933de-61cc-4380-bca1-d7ecb3cee8f5",
-      "orderId": "0f4931ae-135f-4e6b-b529-24ebb74234a0",
-      "productId": "1e80388b-5156-4aec-a025-334fbd02c8fd",
-      "productName": "Thuốc kháng viêm Dược phẩm 336",
-      "quantity": 3,
-      "price": 35510000,
-      "total": 106530000
-    },
-    {
-      "id": "18e6e4c0-1d7c-48c8-8259-67e7f1e1d617",
-      "orderId": "b06965f8-13a5-42cb-aa92-4b6c9e89d3bf",
-      "productId": "bc80cbec-3fa9-40c6-adc3-75b10631876d",
-      "productName": "Thực phẩm chức năng da liễu Pymepharco 726",
-      "quantity": 5,
-      "price": 82090000,
-      "total": 410450000
-    },
-    {
-      "id": "55c7d1dd-a10f-4785-a65e-dd7748892813",
-      "orderId": "b06965f8-13a5-42cb-aa92-4b6c9e89d3bf",
-      "productId": "6ccac688-4295-4109-96cf-c0da500d68d3",
-      "productName": "Vitamin thảo dược Domesco 690",
-      "quantity": 1,
-      "price": 84190000,
-      "total": 84190000
-    },
-    {
-      "id": "0f8e7c95-8201-4aeb-a223-5f5cada49750",
-      "orderId": "057a4c9f-3f8f-4a52-9b8f-09415d0e6fb4",
-      "productId": "bc80cbec-3fa9-40c6-adc3-75b10631876d",
-      "productName": "Thực phẩm chức năng da liễu Pymepharco 726",
-      "quantity": 5,
-      "price": 82090000,
-      "total": 410450000
-    },
-    {
-      "id": "e3addc2f-aa0b-4bd4-bc97-ffaaf898483e",
-      "orderId": "057a4c9f-3f8f-4a52-9b8f-09415d0e6fb4",
-      "productId": "6ccac688-4295-4109-96cf-c0da500d68d3",
-      "productName": "Vitamin thảo dược Domesco 690",
-      "quantity": 5,
-      "price": 84190000,
-      "total": 420950000
-    },
-    {
-      "id": "d24b7acc-df00-4e9a-957c-4010950d8af2",
-      "orderId": "fb933eb7-83b9-4918-a31f-c51cc55088cc",
-      "productId": "f37bcec3-f956-4fa6-ad55-a249d5c1dddd",
-      "productName": "Miếng dán mắt DHG Pharma 074",
-      "quantity": 3,
-      "price": 48140000,
-      "total": 144420000
-    },
-    {
-      "id": "34fe38bf-e3de-44aa-8d05-8fdb5279519f",
-      "orderId": "aa1fbfce-98b2-4a7b-bc3b-5354dff804be",
-      "productId": "2f610700-c910-4359-a647-1372bc4ec151",
-      "productName": "Dầu tim mạch Dược phẩm 488",
-      "quantity": 4,
-      "price": 38490000,
-      "total": 153960000
-    },
-    {
-      "id": "9af23ea9-bcbc-46a5-8498-fccbda8ea9fe",
-      "orderId": "12ad1047-d792-411c-bfe4-7b22b4e8ae95",
-      "productId": "17ef3bed-8d56-47e1-a72e-3ebf2e953e10",
-      "productName": "Sirô kháng sinh Công ty 947",
-      "quantity": 1,
-      "price": 16710000,
-      "total": 16710000
-    },
-    {
-      "id": "08526a6a-2244-4f0f-8747-e0c5b745c467",
-      "orderId": "12ad1047-d792-411c-bfe4-7b22b4e8ae95",
-      "productId": "99918993-ee20-4f13-bb41-c076037f3925",
-      "productName": "Dầu giảm đau DHG Pharma 696",
-      "quantity": 3,
-      "price": 43190000,
-      "total": 129570000
-    },
-    {
-      "id": "176feb98-be44-43ac-acb6-127fcec19083",
-      "orderId": "12ad1047-d792-411c-bfe4-7b22b4e8ae95",
-      "productId": "2f610700-c910-4359-a647-1372bc4ec151",
-      "productName": "Dầu tim mạch Dược phẩm 488",
-      "quantity": 5,
-      "price": 38490000,
-      "total": 192450000
-    },
-    {
-      "id": "ff8170e4-9de0-47fd-89a6-abe3a2049027",
-      "orderId": "12ad1047-d792-411c-bfe4-7b22b4e8ae95",
-      "productId": "0037c3b7-3f42-4cf2-840c-9bc372036c50",
-      "productName": "Viên mắt Dược phẩm 580",
-      "quantity": 1,
-      "price": 18360000,
-      "total": 18360000
-    },
-    {
-      "id": "12a297e6-02ab-45c9-98d8-68c2df586b66",
-      "orderId": "ad981e16-3518-44f8-9e31-6639e69efab8",
-      "productId": "6ccac688-4295-4109-96cf-c0da500d68d3",
-      "productName": "Vitamin thảo dược Domesco 690",
-      "quantity": 2,
-      "price": 84190000,
-      "total": 168380000
-    },
-    {
-      "id": "15dc136b-2081-4577-85e7-4c8cc822e2df",
-      "orderId": "ad981e16-3518-44f8-9e31-6639e69efab8",
-      "productId": "a1babaea-4302-4b83-b430-7107e748b4b9",
-      "productName": "Kem tiêu hóa Công ty 008",
-      "quantity": 2,
-      "price": 43090000,
-      "total": 86180000
-    },
-    {
-      "id": "9cb4f497-1c27-438c-a82b-cc9b9e905d9a",
-      "orderId": "a1104d31-db19-43eb-85f0-e8fede30d8ad",
-      "productId": "6e5dab69-55c9-435b-ae9d-d08693dd5bea",
-      "productName": "Vitamin tim mạch Dược phẩm 327",
-      "quantity": 1,
-      "price": 18290000,
-      "total": 18290000
-    },
-    {
-      "id": "285b00c4-5f72-4bb5-af1e-76442d117bb9",
-      "orderId": "a1104d31-db19-43eb-85f0-e8fede30d8ad",
-      "productId": "fc28cb9f-44d1-4beb-98aa-c5b44a49bc0f",
-      "productName": "Nước da liễu Pymepharco 498",
-      "quantity": 3,
-      "price": 18240000,
-      "total": 54720000
-    },
-    {
-      "id": "1cd60f31-5ea2-4882-bb00-63c1b200eaa8",
-      "orderId": "463f3017-a01f-4394-b8f2-7faaff3f8f97",
-      "productId": "17ef3bed-8d56-47e1-a72e-3ebf2e953e10",
-      "productName": "Sirô kháng sinh Công ty 947",
-      "quantity": 3,
-      "price": 16710000,
-      "total": 50130000
-    },
-    {
-      "id": "5db6162a-0e3f-4516-8f44-0d9cb0233472",
-      "orderId": "463f3017-a01f-4394-b8f2-7faaff3f8f97",
-      "productId": "144ac8a4-ae07-4b17-a62a-cf27434f18a9",
-      "productName": "Kem kháng sinh Dược phẩm 761",
-      "quantity": 4,
-      "price": 12130000,
-      "total": 48520000
-    },
-    {
-      "id": "2aa87f9e-f594-4ddc-ad0a-b4ac4ed32e41",
-      "orderId": "463f3017-a01f-4394-b8f2-7faaff3f8f97",
-      "productId": "144ac8a4-ae07-4b17-a62a-cf27434f18a9",
-      "productName": "Kem kháng sinh Dược phẩm 761",
-      "quantity": 5,
-      "price": 12130000,
-      "total": 60650000
-    },
-    {
-      "id": "5ec1d10a-514a-4ad6-9b01-0e18d85619d1",
-      "orderId": "463f3017-a01f-4394-b8f2-7faaff3f8f97",
-      "productId": "ec1554c4-8ac6-4be4-a1db-57e69118c046",
-      "productName": "Thuốc hô hấp Vimedimex Việt 537",
-      "quantity": 3,
-      "price": 50480000,
-      "total": 151440000
-    },
-    {
-      "id": "5ffce9cc-b6a0-406c-b368-e2805f737ed9",
-      "orderId": "88af1e64-a537-4864-b5e2-4f581c1f716c",
-      "productId": "bc80cbec-3fa9-40c6-adc3-75b10631876d",
-      "productName": "Thực phẩm chức năng da liễu Pymepharco 726",
-      "quantity": 2,
-      "price": 82090000,
-      "total": 164180000
-    },
-    {
-      "id": "3eeef257-822e-4393-b276-08d134aec2a3",
-      "orderId": "88af1e64-a537-4864-b5e2-4f581c1f716c",
-      "productId": "a4a9b6a4-a84e-4649-bce6-99a92a06bd74",
-      "productName": "Kem dinh dưỡng DHG Pharma 762",
-      "quantity": 2,
-      "price": 50140000,
-      "total": 100280000
-    },
-    {
-      "id": "7ad5f261-517c-410b-9268-0cafc6f8a601",
-      "orderId": "b3329bbd-58f3-446f-8e80-946b9d44a5fe",
-      "productId": "03d656cd-5073-47ba-9c02-03d0487af046",
-      "productName": "Dung dịch thảo dược OPC Pharma 094",
-      "quantity": 5,
-      "price": 84040000,
-      "total": 420200000
-    }
-  ],
   "brands": [
     "Domesco",
     "Dược phẩm",
@@ -6139,9 +5833,6 @@
     "DHG Pharma",
     "Công ty"
   ],
-  "prescriptions": [],
-  "reviews": [],
-  "wishlist": [],
   "tokens": [
     {
       "id": "41589be9-7ef4-4569-83ff-6e50693a9062",
@@ -6189,6 +5880,46 @@
       "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjlmMDgwMGFjLTk4ZTItNDg3NS05ZDMxLWIzZTk3ZDEzN2NlNiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjI4MDQ3MiwiZXhwIjoxNzQ2Mjg0MDcyfQ.2B3ERKY8MEoqfnqYKqtfSGCeJibyCpkAW83CVqzoXsQ",
       "createdAt": "2025-05-03T20:54:32.899Z",
       "expiresAt": "2025-05-03T21:54:32.899Z",
+      "isValid": true
+    },
+    {
+      "id": "19660e6e-2526-433b-bddf-4c61a8db9658",
+      "userId": "8f3f7506-3987-4927-afdc-ac3c48b88b82",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjhmM2Y3NTA2LTM5ODctNDkyNy1hZmRjLWFjM2M0OGI4OGI4MiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjI4ODI5MiwiZXhwIjoxNzQ2MjkxODkyfQ.AgOAwY4nOFWT38QQjWo35bnwcUYs5g7j6cgat-Q7als",
+      "createdAt": "2025-05-03T23:04:52.941Z",
+      "expiresAt": "2025-05-04T00:04:52.941Z",
+      "isValid": true
+    },
+    {
+      "id": "31d5c765-5d61-405a-9951-4252984368dc",
+      "userId": "08afd213-6b8a-49a1-a657-9d36db2d71c2",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjA4YWZkMjEzLTZiOGEtNDlhMS1hNjU3LTlkMzZkYjJkNzFjMiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjI5MDU3MiwiZXhwIjoxNzQ2Mjk0MTcyfQ.cinbLXqKaCuZfl6Ws-kfB8KBMaNEJ5pmdnXsnAWcOds",
+      "createdAt": "2025-05-03T23:42:52.232Z",
+      "expiresAt": "2025-05-04T00:42:52.232Z",
+      "isValid": true
+    },
+    {
+      "id": "109e4613-8100-41ff-9fa2-a3f68e844c0c",
+      "userId": "74aa85df-4f91-4edd-93bb-da8d529ef57f",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0YWE4NWRmLTRmOTEtNGVkZC05M2JiLWRhOGQ1MjllZjU3ZiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjI5MDYyMSwiZXhwIjoxNzQ2Mjk0MjIxfQ.pea22HxoXK1Ry-knIbNiHgsc8OFQCNbVmf9tkYujUgc",
+      "createdAt": "2025-05-03T23:43:41.392Z",
+      "expiresAt": "2025-05-04T00:43:41.392Z",
+      "isValid": true
+    },
+    {
+      "id": "3ea20d30-f145-4455-a1d9-555cd8be2c1c",
+      "userId": "74aa85df-4f91-4edd-93bb-da8d529ef57f",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ijc0YWE4NWRmLTRmOTEtNGVkZC05M2JiLWRhOGQ1MjllZjU3ZiIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjI5MTc1MiwiZXhwIjoxNzQ2Mjk1MzUyfQ.tMAHzQD2PzYL2slAbKk37kTIvTQBSKCGo_5LK6j9UQk",
+      "createdAt": "2025-05-04T00:02:32.085Z",
+      "expiresAt": "2025-05-04T01:02:32.084Z",
+      "isValid": true
+    },
+    {
+      "id": "d9796156-a653-463f-a3f8-8b91577f1947",
+      "userId": "aabb12fd-3e65-4800-9971-6502ab61dc2a",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFhYmIxMmZkLTNlNjUtNDgwMC05OTcxLTY1MDJhYjYxZGMyYSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NjY4NzI0MywiZXhwIjoxNzQ2NjkwODQzfQ.M8sOQPeyLhkvXHw-MGa2r_4X70AVXMKrPKDNy7dZ8p0",
+      "createdAt": "2025-05-08T13:54:03.830Z",
+      "expiresAt": "2025-05-08T14:54:03.830Z",
       "isValid": true
     }
   ],
