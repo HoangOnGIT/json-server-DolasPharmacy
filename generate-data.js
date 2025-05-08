@@ -1,6 +1,7 @@
 import { faker } from "@faker-js/faker";
 import fs from "fs/promises";
 import bcrypt from "bcrypt";
+import fetch from "node-fetch"; // You may need to install this: npm install node-fetch
 
 // Helper function to generate unique IDs
 const generateId = () => faker.string.uuid();
@@ -22,6 +23,38 @@ const getPriceRange = (price) => {
   if (price < 50000000) return "20 triệu - 50 triệu";
   return "Trên 50 triệu";
 };
+
+// Array of real product images from Cloudinary to be used for both products and categories
+const cloudinaryImages = [
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341495/00021988-anica-phytextra-60v-513_fc7gpe.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341495/00031920-top-grow-jpanwell-10-ch_vogxfu.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341495/00031920-top-grow-jpanwell-10-ch_1_a0fqlp.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341495/00031036-omexxel-ginkgo-120-2x15_hx0z2x.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341494/00029929-maxpremum-naga-plus-200_uu8e9w.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341494/00030869-sasagold-saffron-nhuy-h_btbsu0.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341489/img-9003-7e22ddc19e_1_czsgxg.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341489/dsc-09932-bc701e2141_y7evhl.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341489/dsc-09866-48ad7ea252_mf8bzn.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341489/hebe-tuyp-truoc-908f63e863_xzl4jv.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341488/dsc-00535-480fad02f8_1_mxnxvw.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341487/00503275-vien-uong-bo-sung-canxi_qjtovs.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341487/00032817-blood-care-jpanwell-60v_ule2rv.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341487/dsc-00036-f81526ba97_oojjx4.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341487/dsc-00025-00386132d2_ryqm1b.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341487/00502603-vien-uong-tang-cuong-ch_ytdohn.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341486/00503081-sap-duong-am-vaseline-r_xz0dfq.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00503066-son-duong-moi-sebamed-l_iuf3kn.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00032923-vien-uong-cai-thien-tim_m6kd4c.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00502680-vien-uong-lam-dep-da-ch_we06np.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00502416-blackmores-executive-b-4_fsoxxw.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00501988-sua-cho-benh-nhan-gan-f_pyyoou.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341484/00032918-glucosamine-and-chondro_xsbh2t.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341484/00032923-vien-uong-cai-thien-tim_1_b56yqn.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341484/00032884-okinawa-fucoidan-jpanwe_ohmdom.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341483/00031920-top-grow-jpanwell-10-ch-3f81b1a4-df3b-41f3-869d-c64cb90506fa_qble7r.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341483/00500955-tra-nhan-sam-ko-ginseng_a9hd5l.png",
+  "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341483/00500119-vien-uong-ho-tro-giam-n_fyciyl.png",
+];
 
 // Generate pharmacy-specific categories
 const generatePharmacyCategories = (count) => {
@@ -90,7 +123,7 @@ const generatePharmacyCategories = (count) => {
         i > 5 && faker.datatype.boolean(0.3)
           ? categories[faker.number.int({ min: 0, max: 4 })].id
           : null,
-      image: faker.image.url(),
+      image: faker.helpers.arrayElement(cloudinaryImages),
       isActive: faker.datatype.boolean(0.9),
       displayOrder: i + 1,
       metaTitle: categoryData.name,
@@ -163,11 +196,39 @@ const generatePharmacySuppliers = (count) => {
   return suppliers;
 };
 
+// Fetch provinces and districts data from API
+const fetchProvincesAndDistricts = async () => {
+  try {
+    const [provincesResponse, districtsResponse] = await Promise.all([
+      fetch("https://provinces.open-api.vn/api/p"),
+      fetch("https://provinces.open-api.vn/api/d")
+    ]);
+    
+    const provinces = await provincesResponse.json();
+    const districts = await districtsResponse.json();
+    
+    return {
+      provinces: provinces.map(p => ({ id: p.code, name: p.name })),
+      districts: districts.map(d => ({ id: d.code, name: d.name, provinceId: d.province_code }))
+    };
+  } catch (error) {
+    console.error("Failed to fetch provinces/districts:", error);
+    // Fallback to some default data if API fails
+    return {
+      provinces: [{ id: 1, name: "Tỉnh Hà Nội" }, { id: 2, name: "Tỉnh TP. Hồ Chí Minh" }],
+      districts: [{ id: 1, name: "Quận Hoàn Kiếm", provinceId: 1 }, { id: 2, name: "Quận 1", provinceId: 2 }]
+    };
+  }
+};
+
 // Generate pharmacy users with Vietnamese names and locations
 const generatePharmacyUsers = async (count) => {
   const users = [];
   const carts = []; // Initialize carts array
   const favourites = []; // Initialize favourites array
+  
+  // Fetch provinces and districts from API
+  const { provinces, districts } = await fetchProvincesAndDistricts();
 
   // Always add admin user first
   const adminUser = {
@@ -183,15 +244,11 @@ const generatePharmacyUsers = async (count) => {
     lastLogin: faker.date.recent().toISOString(),
     addresses: [
       {
-        id: generateId(),
-        type: "billing",
+        type: "shipping",
         isPrimary: true,
-        firstName: "Admin",
-        lastName: "User",
-        street: "123 Đường Admin, Quận 1",
-        city: "TP. Hồ Chí Minh",
-        state: "",
-        postalCode: "70000",
+        street: "123",
+        city: provinces.length > 0 ? provinces[0].name : "Tỉnh Hà Giang",
+        state: districts.length > 0 ? districts[0].name : "Quận Hoàn Kiếm",
         country: "Việt Nam",
         phone: "0987654321",
       },
@@ -219,21 +276,6 @@ const generatePharmacyUsers = async (count) => {
     createdAt: faker.date.past({ years: 1 }).toISOString(),
     updatedAt: faker.date.recent().toISOString(),
   });
-
-  const vietnameseCities = [
-    "Hà Nội",
-    "TP. Hồ Chí Minh",
-    "Đà Nẵng",
-    "Hải Phòng",
-    "Cần Thơ",
-    "Huế",
-    "Nha Trang",
-    "Vũng Tàu",
-    "Đà Lạt",
-    "Hạ Long",
-    "Vinh",
-    "Buôn Ma Thuột",
-  ];
 
   const vietnameseLastNames = [
     "Nguyễn",
@@ -284,7 +326,13 @@ const generatePharmacyUsers = async (count) => {
     const firstName = faker.helpers.arrayElement(vietnameseFirstNames);
     const fullName = `${lastName} ${firstName}`;
 
-    const city = faker.helpers.arrayElement(vietnameseCities);
+    // Get random province and district
+    const province = faker.helpers.arrayElement(provinces);
+    // Get districts that belong to the selected province, or any district if relation not found
+    const matchingDistricts = districts.filter(d => d.provinceId === province.id);
+    const district = matchingDistricts.length > 0 
+      ? faker.helpers.arrayElement(matchingDistricts) 
+      : faker.helpers.arrayElement(districts);
 
     const role = faker.helpers.arrayElement([
       "customer",
@@ -319,22 +367,11 @@ const generatePharmacyUsers = async (count) => {
       addresses: Array.from(
         { length: faker.number.int({ min: 1, max: 3 }) },
         () => ({
-          id: generateId(),
           type: faker.helpers.arrayElement(["shipping", "billing"]),
           isPrimary: faker.datatype.boolean(),
-          firstName: firstName,
-          lastName: lastName,
-          street: `${faker.number.int({
-            min: 1,
-            max: 200,
-          })} Đường ${faker.word.sample()}, ${faker.helpers.arrayElement([
-            "Phường",
-            "Quận",
-            "Huyện",
-          ])} ${faker.word.sample()}`,
-          city: city,
-          state: "",
-          postalCode: faker.string.numeric(5),
+          street: faker.string.numeric(3),
+          city: province.name,
+          state: district.name,
           country: "Việt Nam",
           phone: `0${faker.string.numeric(9)}`,
         })
@@ -383,6 +420,38 @@ const generatePharmacyProducts = (count, categories, suppliers, brands) => {
       basePrice - discount.maxDiscountAmount || 0
     );
   };
+
+  // Array of real product images from Cloudinary
+  const cloudinaryProductImages = [
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341495/00021988-anica-phytextra-60v-513_fc7gpe.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341495/00031920-top-grow-jpanwell-10-ch_vogxfu.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341495/00031920-top-grow-jpanwell-10-ch_1_a0fqlp.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341495/00031036-omexxel-ginkgo-120-2x15_hx0z2x.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341494/00029929-maxpremum-naga-plus-200_uu8e9w.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341494/00030869-sasagold-saffron-nhuy-h_btbsu0.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341489/img-9003-7e22ddc19e_1_czsgxg.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341489/dsc-09932-bc701e2141_y7evhl.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341489/dsc-09866-48ad7ea252_mf8bzn.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341489/hebe-tuyp-truoc-908f63e863_xzl4jv.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341488/dsc-00535-480fad02f8_1_mxnxvw.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341487/00503275-vien-uong-bo-sung-canxi_qjtovs.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341487/00032817-blood-care-jpanwell-60v_ule2rv.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341487/dsc-00036-f81526ba97_oojjx4.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341487/dsc-00025-00386132d2_ryqm1b.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341487/00502603-vien-uong-tang-cuong-ch_ytdohn.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341486/00503081-sap-duong-am-vaseline-r_xz0dfq.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00503066-son-duong-moi-sebamed-l_iuf3kn.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00032923-vien-uong-cai-thien-tim_m6kd4c.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00502680-vien-uong-lam-dep-da-ch_we06np.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00502416-blackmores-executive-b-4_fsoxxw.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00501988-sua-cho-benh-nhan-gan-f_pyyoou.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341484/00032918-glucosamine-and-chondro_xsbh2t.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341484/00032923-vien-uong-cai-thien-tim_1_b56yqn.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341484/00032884-okinawa-fucoidan-jpanwe_ohmdom.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341483/00031920-top-grow-jpanwell-10-ch-3f81b1a4-df3b-41f3-869d-c64cb90506fa_qble7r.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341483/00500955-tra-nhan-sam-ko-ginseng_a9hd5l.png",
+    "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341483/00500119-vien-uong-ho-tro-giam-n_fyciyl.png",
+  ];
 
   for (let i = 0; i < count; i++) {
     const category = faker.helpers.arrayElement(categories);
@@ -462,6 +531,33 @@ const generatePharmacyProducts = (count, categories, suppliers, brands) => {
       "Trên 1kg",
     ]);
 
+    // Generate product images, using Cloudinary URL for the primary image
+    const primaryImageUrl = faker.helpers.arrayElement(cloudinaryProductImages);
+    const imagesCount = faker.number.int({ min: 1, max: 4 });
+    
+    const images = [{
+      id: generateId(),
+      url: primaryImageUrl,
+      alt: `${productName} - Sản phẩm`,
+      isPrimary: true,
+      sortOrder: 0
+    }];
+    
+    // Add additional images if needed
+    if (imagesCount > 1) {
+      const additionalImages = Array.from(
+        { length: imagesCount - 1 },
+        (_, index) => ({
+          id: generateId(),
+          url: `https://picsum.photos/seed/${faker.number.int(1000)}/500/500`,
+          alt: `${productName} - Hình chi tiết ${index + 1}`,
+          isPrimary: false,
+          sortOrder: index + 1,
+        })
+      );
+      images.push(...additionalImages);
+    }
+
     const product = {
       id: generateId(),
       name: productName,
@@ -488,16 +584,7 @@ const generatePharmacyProducts = (count, categories, suppliers, brands) => {
       }),
       supplierId: supplier.id,
       brand: brand,
-      images: Array.from(
-        { length: faker.number.int({ min: 1, max: 4 }) },
-        (_, index) => ({
-          id: generateId(),
-          url: `https://picsum.photos/seed/${faker.number.int(1000)}/500/500`,
-          alt: `${productName} - ${index === 0 ? "Sản phẩm" : "Hình chi tiết"}`,
-          isPrimary: index === 0,
-          sortOrder: index,
-        })
-      ),
+      images: images,
       variants: Array.from(
         { length: faker.number.int({ min: 0, max: 2 }) },
         () => ({
