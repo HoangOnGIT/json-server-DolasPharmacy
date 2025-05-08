@@ -271,7 +271,8 @@ server.use((req, res, next) => {
     req.path.startsWith("/api") &&
     req.method !== "GET" &&
     req.path !== "/api/login" &&
-    req.path !== "/api/register"
+    req.path !== "/api/register" &&
+    !(req.path === "/api/orders" && req.method === "POST") // Add exception for POST to orders
   ) {
     const authHeader = req.headers.authorization;
     if (!authHeader) {

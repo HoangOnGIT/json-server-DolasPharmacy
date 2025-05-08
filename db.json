@@ -410,34 +410,40 @@
       "updatedAt": "2025-05-03T19:41:48.532Z"
     },
     {
-      "id": "eb04c129-04bf-4521-ba14-a4acdb7bea93",
-      "name": "Dầu dinh dưỡng Vimedimex Việt 971",
-      "category": "a091907d-2f41-44c4-a317-990659af486a",
-      "categoryName": "Thuốc không kê đơn",
-      "subCategory": "dinh dưỡng",
+      "name": "Test thao tác cập nhật",
       "sku": "DOLA-IYR6H7",
-      "requiresPrescription": true,
+      "brand": "DHG Pharma",
+      "category": "4",
+      "subCategory": "dinh dưỡng",
       "basePrice": 19620000,
       "salePrice": 16090000,
       "cost": 10640000,
-      "priceRange": "10 triệu - 20 triệu",
       "discount": {
         "type": "percentage",
         "value": 18,
         "maxDiscountAmount": 1729924
       },
-      "discountedPrice": 17890076,
+      "stock": {
+        "total": 117,
+        "reserved": 7,
+        "available": 870,
+        "lowStockThreshold": 10,
+        "lastRestocked": "2025-05-03T13:42:15.886Z"
+      },
+      "priceRange": "10 triệu - 20 triệu",
+      "origin": "Việt Nam",
+      "manufacturerName": "Vimedimex Việt Nam",
+      "weight": "200g - 500g",
+      "targeted": "Phụ nữ mang thai",
       "supplierId": "e1f92327-415c-475e-af13-58c50e9c211e",
-      "brand": "Vimedimex Việt",
-      "images": [
-        {
-          "id": "4cb4dc5a-9c4a-48a9-b0e6-b363ee207699",
-          "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00503066-son-duong-moi-sebamed-l_iuf3kn.png",
-          "alt": "Dầu dinh dưỡng Vimedimex Việt 971 - Sản phẩm",
-          "isPrimary": true,
-          "sortOrder": 0
-        }
-      ],
+      "status": "active",
+      "isFeatured": false,
+      "isPopular": false,
+      "description": "<h3>Th&ocirc;ng tin sản phẩm Dầu dinh dưỡng Vimedimex Việt 971</h3>\n<p><strong>C&ocirc;ng dụng:</strong> Sản phẩm Dầu dinh dưỡng Vimedimex Việt 971 gi&uacute;p điều trị c&aacute;c vấn đề sức khỏe li&ecirc;n quan đến dinh dưỡng. Sử dụng đ&uacute;ng liều lượng để đạt hiệu quả tốt nhất.</p>\n<p><strong>Đặc điểm nổi bật:</strong></p>\n<ul>\n<li>Được sản xuất bởi Vimedimex Việt Nam</li>\n<li>Hiệu quả trong việc hỗ trợ ti&ecirc;u h&oacute;a</li>\n<li>Ph&ugrave; hợp với người cao tuổi</li>\n</ul>\n<p><em>Lưu &yacute;: Đọc kỹ hướng dẫn sử dụng trước khi d&ugrave;ng. Bảo quản nơi kh&ocirc; r&aacute;o, tho&aacute;ng m&aacute;t, tr&aacute;nh &aacute;nh nắng trực tiếp.</em></p>",
+      "ingredients": "Thành phần chính: iste deputo denique eaque adhuc",
+      "dosage": "Liều dùng: 2 lần/ngày, 1 viên/lần.",
+      "warnings": "Cảnh báo: Không sử dụng khi Delibero tabernus bellicus copia aequus crastinus victus ater.",
+      "requiresPrescription": true,
       "variants": [
         {
           "id": "46fc874f-1f9e-4df6-bebf-901f84a1cacc",
@@ -447,28 +453,22 @@
           "stock": 84
         }
       ],
-      "stock": {
-        "total": 117,
-        "reserved": 7,
-        "available": 870,
-        "lowStockThreshold": 10,
-        "lastRestocked": "2025-05-03T13:42:15.886Z"
-      },
-      "description": "<h3>Thông tin sản phẩm Dầu dinh dưỡng Vimedimex Việt 971</h3>\n<p><strong>Công dụng:</strong> Sản phẩm Dầu dinh dưỡng Vimedimex Việt 971 giúp điều trị các vấn đề sức khỏe liên quan đến dinh dưỡng. Sử dụng đúng liều lượng để đạt hiệu quả tốt nhất.</p>\n<p><strong>Đặc điểm nổi bật:</strong></p>\n<ul>\n  <li>Được sản xuất bởi Vimedimex Việt Nam</li>\n  <li>Hiệu quả trong việc hỗ trợ tiêu hóa</li>\n  <li>Phù hợp với người cao tuổi</li>\n</ul>\n<p><em>Lưu ý: Đọc kỹ hướng dẫn sử dụng trước khi dùng. Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.</em></p>",
-      "ingredients": "Thành phần chính: iste deputo denique eaque adhuc",
-      "dosage": "Liều dùng: 2 lần/ngày, 1 viên/lần.",
-      "warnings": "Cảnh báo: Không sử dụng khi Delibero tabernus bellicus copia aequus crastinus victus ater.",
-      "origin": "Việt Nam",
-      "manufacturerName": "Vimedimex Việt Nam",
-      "status": "active",
-      "isFeatured": false,
-      "isPopular": false,
-      "averageRating": 4.780220833211496,
-      "reviewCount": 246,
-      "targeted": "Phụ nữ mang thai",
-      "weight": "200g - 500g",
-      "createdAt": "2025-01-13T09:49:17.516Z",
-      "updatedAt": "2025-05-03T19:17:36.952Z"
+      "images": [
+        {
+          "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00503066-son-duong-moi-sebamed-l_iuf3kn.png",
+          "alt": "Dầu dinh dưỡng Vimedimex Việt 971 - Sản phẩm",
+          "isPrimary": true,
+          "sortOrder": 0
+        },
+        {
+          "url": "https://res.cloudinary.com/dysjwopcc/image/upload/v1746687795/wzvkiqrygqf4fxbpqjho.png",
+          "alt": "Product image 2",
+          "isPrimary": false,
+          "sortOrder": 1
+        }
+      ],
+      "updatedAt": 1746688622366,
+      "id": "eb04c129-04bf-4521-ba14-a4acdb7bea93"
     },
     {
       "id": "70f0be3c-d2e0-4a6b-8ffb-01f7e9662ce2",
@@ -3153,7 +3153,7 @@
       "dateOfBirth": "1990-01-01",
       "role": "admin",
       "verificationStatus": "verified",
-      "lastLogin": "2025-05-04T07:05:47.203Z",
+      "lastLogin": "2025-05-08T07:29:44.301Z",
       "addresses": [
         {
           "type": "shipping",
@@ -4180,15 +4180,127 @@
       ],
       "createdAt": "2024-02-05T13:06:33.502Z",
       "updatedAt": "2025-05-03T13:44:24.540Z"
+    },
+    {
+      "id": "5da74660-1382-4dec-b75d-df7fd1ab672d",
+      "email": "huyhoang123@gmail.com",
+      "passwordHash": "$2b$10$jc7ZSErd6pN9a9KZ7k0lyO9omc3kyRwuMUfGihm1/fFp8wnfI7gyy",
+      "firstName": "Nguyễn",
+      "lastName": "Hoàng",
+      "role": "customer",
+      "verificationStatus": "pending",
+      "createdAt": "2025-05-08T07:07:01.789Z",
+      "updatedAt": 1746688084529,
+      "lastLogin": "2025-05-08T07:11:00.922Z",
+      "addresses": [
+        {
+          "id": "17466880845065da74660-1382-4dec-b75d-df7fd1ab672d",
+          "type": "shipping",
+          "isPrimary": true,
+          "street": "12 Nguyễn Văn Bảo Phường 4",
+          "city": "Thành phố Hồ Chí Minh",
+          "state": "Quận Gò Vấp",
+          "country": "Việt Nam",
+          "phone": "0389173220"
+        }
+      ]
     }
   ],
   "carts": [
     {
       "id": "8623660a-4c52-4544-a8c4-ef8218d2a24c",
       "userId": "7054f86e-cdc8-4e75-aad8-08c29eb159a7",
-      "items": [],
+      "items": [
+        {
+          "id": "70f0be3c-d2e0-4a6b-8ffb-01f7e9662ce2",
+          "productId": "70f0be3c-d2e0-4a6b-8ffb-01f7e9662ce2",
+          "name": "Miếng dán tim mạch Pymepharco 154",
+          "salePrice": 39240000,
+          "basePrice": 42190000,
+          "quantity": 1,
+          "images": [
+            {
+              "id": "0c9e38e6-e86b-4ecc-9778-a38e6705c426",
+              "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341495/00031920-top-grow-jpanwell-10-ch_vogxfu.png",
+              "alt": "Miếng dán tim mạch Pymepharco 154 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "id": "512213a7-48bd-4e26-a108-64776ce12212",
+              "url": "https://picsum.photos/seed/250/500/500",
+              "alt": "Miếng dán tim mạch Pymepharco 154 - Hình chi tiết 1",
+              "isPrimary": false,
+              "sortOrder": 1
+            },
+            {
+              "id": "c5371312-6d33-488a-824a-128df04703eb",
+              "url": "https://picsum.photos/seed/996/500/500",
+              "alt": "Miếng dán tim mạch Pymepharco 154 - Hình chi tiết 2",
+              "isPrimary": false,
+              "sortOrder": 2
+            },
+            {
+              "id": "b307ab3c-4bcc-4691-88a4-d5a18479a7af",
+              "url": "https://picsum.photos/seed/730/500/500",
+              "alt": "Miếng dán tim mạch Pymepharco 154 - Hình chi tiết 3",
+              "isPrimary": false,
+              "sortOrder": 3
+            }
+          ],
+          "variant": ""
+        },
+        {
+          "id": "eb04c129-04bf-4521-ba14-a4acdb7bea93",
+          "productId": "eb04c129-04bf-4521-ba14-a4acdb7bea93",
+          "name": "Test thao tác cập nhật",
+          "salePrice": 16090000,
+          "basePrice": 19620000,
+          "quantity": 1,
+          "images": [
+            {
+              "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00503066-son-duong-moi-sebamed-l_iuf3kn.png",
+              "alt": "Dầu dinh dưỡng Vimedimex Việt 971 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "url": "https://res.cloudinary.com/dysjwopcc/image/upload/v1746687795/wzvkiqrygqf4fxbpqjho.png",
+              "alt": "Product image 2",
+              "isPrimary": false,
+              "sortOrder": 1
+            }
+          ],
+          "variant": ""
+        },
+        {
+          "id": "888e48e6-57bc-442f-878c-dd0fc8c178da",
+          "productId": "888e48e6-57bc-442f-878c-dd0fc8c178da",
+          "name": "Sirô da liễu DHG Pharma 020",
+          "salePrice": 1600000,
+          "basePrice": 1680000,
+          "quantity": 1,
+          "images": [
+            {
+              "id": "9715af5c-fe90-4da9-9c17-19c70dd90044",
+              "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341489/dsc-09866-48ad7ea252_mf8bzn.png",
+              "alt": "Sirô da liễu DHG Pharma 020 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "id": "b6c6973d-17d2-40a5-af21-fc625c3d5e75",
+              "url": "https://picsum.photos/seed/784/500/500",
+              "alt": "Sirô da liễu DHG Pharma 020 - Hình chi tiết 1",
+              "isPrimary": false,
+              "sortOrder": 1
+            }
+          ],
+          "variant": ""
+        }
+      ],
       "createdAt": "2025-02-01T16:09:50.921Z",
-      "updatedAt": 1746342741195
+      "updatedAt": 1746688722165
     },
     {
       "id": "61490865-1460-4c91-8096-4fbd93b1823c",
@@ -4392,15 +4504,103 @@
       "items": [],
       "createdAt": "2025-02-12T09:50:36.942Z",
       "updatedAt": "2025-05-03T12:07:54.015Z"
+    },
+    {
+      "id": "67d9d74b-fdad-4288-aa98-228877c9a427",
+      "userId": "5da74660-1382-4dec-b75d-df7fd1ab672d",
+      "items": [
+        {
+          "id": "e8341455-94a8-4e25-b9de-d05e08afa227",
+          "productId": "e8341455-94a8-4e25-b9de-d05e08afa227",
+          "name": "Viên thảo dược Domesco 438",
+          "salePrice": 20000,
+          "basePrice": 20000,
+          "quantity": 2,
+          "images": [
+            {
+              "id": "928dd50a-185e-4cde-a026-acd7cd4be1d2",
+              "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00502680-vien-uong-lam-dep-da-ch_we06np.png",
+              "alt": "Viên thảo dược Domesco 438 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            }
+          ],
+          "variant": "thảo dược - Loại 97"
+        }
+      ],
+      "createdAt": "2025-05-08T07:07:01.791Z",
+      "updatedAt": 1746688182001
     }
   ],
   "favourites": [
     {
       "id": "79f5c420-51cd-44c3-a0ce-cc3b52450866",
       "userId": "7054f86e-cdc8-4e75-aad8-08c29eb159a7",
-      "items": [],
+      "items": [
+        {
+          "name": "Test thao tác cập nhật",
+          "sku": "DOLA-IYR6H7",
+          "brand": "DHG Pharma",
+          "category": "4",
+          "subCategory": "dinh dưỡng",
+          "basePrice": 19620000,
+          "salePrice": 16090000,
+          "cost": 10640000,
+          "discount": {
+            "type": "percentage",
+            "value": 18,
+            "maxDiscountAmount": 1729924
+          },
+          "stock": {
+            "total": 117,
+            "reserved": 7,
+            "available": 870,
+            "lowStockThreshold": 10,
+            "lastRestocked": "2025-05-03T13:42:15.886Z"
+          },
+          "priceRange": "10 triệu - 20 triệu",
+          "origin": "Việt Nam",
+          "manufacturerName": "Vimedimex Việt Nam",
+          "weight": "200g - 500g",
+          "targeted": "Phụ nữ mang thai",
+          "supplierId": "e1f92327-415c-475e-af13-58c50e9c211e",
+          "status": "active",
+          "isFeatured": false,
+          "isPopular": false,
+          "description": "<h3>Th&ocirc;ng tin sản phẩm Dầu dinh dưỡng Vimedimex Việt 971</h3>\n<p><strong>C&ocirc;ng dụng:</strong> Sản phẩm Dầu dinh dưỡng Vimedimex Việt 971 gi&uacute;p điều trị c&aacute;c vấn đề sức khỏe li&ecirc;n quan đến dinh dưỡng. Sử dụng đ&uacute;ng liều lượng để đạt hiệu quả tốt nhất.</p>\n<p><strong>Đặc điểm nổi bật:</strong></p>\n<ul>\n<li>Được sản xuất bởi Vimedimex Việt Nam</li>\n<li>Hiệu quả trong việc hỗ trợ ti&ecirc;u h&oacute;a</li>\n<li>Ph&ugrave; hợp với người cao tuổi</li>\n</ul>\n<p><em>Lưu &yacute;: Đọc kỹ hướng dẫn sử dụng trước khi d&ugrave;ng. Bảo quản nơi kh&ocirc; r&aacute;o, tho&aacute;ng m&aacute;t, tr&aacute;nh &aacute;nh nắng trực tiếp.</em></p>",
+          "ingredients": "Thành phần chính: iste deputo denique eaque adhuc",
+          "dosage": "Liều dùng: 2 lần/ngày, 1 viên/lần.",
+          "warnings": "Cảnh báo: Không sử dụng khi Delibero tabernus bellicus copia aequus crastinus victus ater.",
+          "requiresPrescription": true,
+          "variants": [
+            {
+              "id": "46fc874f-1f9e-4df6-bebf-901f84a1cacc",
+              "name": "dinh dưỡng - Loại 64",
+              "sku": "DOLA-NWY9A1OFEM",
+              "price": 210000,
+              "stock": 84
+            }
+          ],
+          "images": [
+            {
+              "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00503066-son-duong-moi-sebamed-l_iuf3kn.png",
+              "alt": "Dầu dinh dưỡng Vimedimex Việt 971 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "url": "https://res.cloudinary.com/dysjwopcc/image/upload/v1746687795/wzvkiqrygqf4fxbpqjho.png",
+              "alt": "Product image 2",
+              "isPrimary": false,
+              "sortOrder": 1
+            }
+          ],
+          "updatedAt": 1746688622366,
+          "id": "eb04c129-04bf-4521-ba14-a4acdb7bea93"
+        }
+      ],
       "createdAt": "2024-08-11T08:59:30.139Z",
-      "updatedAt": "2025-05-03T14:21:46.417Z"
+      "updatedAt": 1746688707326
     },
     {
       "id": "c79a208b-0b05-4a21-abc9-388d6916ce59",
@@ -4957,6 +5157,13 @@
       ],
       "createdAt": "2024-07-24T02:45:08.451Z",
       "updatedAt": "2025-05-03T19:24:06.767Z"
+    },
+    {
+      "id": "b294a092-16c5-4879-abe7-ae2245d9cfda",
+      "userId": "5da74660-1382-4dec-b75d-df7fd1ab672d",
+      "items": [],
+      "createdAt": "2025-05-08T07:07:01.806Z",
+      "updatedAt": "2025-05-08T07:07:01.806Z"
     }
   ],
   "orders": [
@@ -4975,7 +5182,9 @@
     {
       "id": "c1c1a624-6924-48ce-ba96-67ffc6e3e273",
       "userId": "6af6b6c3-91ff-4e8b-a0db-a5bdffb3c627",
-      "items": ["1e2e3c65-2ecf-4f3d-bf58-e4c509d7bb3c"],
+      "items": [
+        "1e2e3c65-2ecf-4f3d-bf58-e4c509d7bb3c"
+      ],
       "total": 173580000,
       "status": "completed",
       "createdAt": "2024-11-06T04:19:41.673Z",
@@ -4984,7 +5193,9 @@
     {
       "id": "fe898c4a-2df0-47ef-9363-4b3f87a63748",
       "userId": "015899d8-c70b-4b53-b9a8-9c7a6dcb8535",
-      "items": ["398b170d-2789-4a64-9ca0-be084bb15a3e"],
+      "items": [
+        "398b170d-2789-4a64-9ca0-be084bb15a3e"
+      ],
       "total": 96750000,
       "status": "cancelled",
       "createdAt": "2025-01-07T14:06:42.637Z",
@@ -5006,7 +5217,9 @@
     {
       "id": "3c5e5c41-a24f-4a3a-8af0-8ecd245d1ec1",
       "userId": "be9603a6-f29b-4ed4-9483-e1930f2fda00",
-      "items": ["76e710ba-a006-4965-88cd-6f3e70b169d4"],
+      "items": [
+        "76e710ba-a006-4965-88cd-6f3e70b169d4"
+      ],
       "total": 192900000,
       "status": "cancelled",
       "createdAt": "2024-06-13T13:04:03.662Z",
@@ -5068,7 +5281,9 @@
     {
       "id": "f58f2414-c99e-4566-b713-5444c4adb73c",
       "userId": "970e6da0-cf3c-415a-82b5-a2d9e238c785",
-      "items": ["b11123a9-766a-4b28-b545-209379dd5f3e"],
+      "items": [
+        "b11123a9-766a-4b28-b545-209379dd5f3e"
+      ],
       "total": 84570000,
       "status": "cancelled",
       "createdAt": "2024-10-02T02:23:21.773Z",
@@ -5203,7 +5418,9 @@
     {
       "id": "affe390e-f9bf-4f9e-a565-804ce586e711",
       "userId": "04fe5715-d755-4dff-82bf-24e4e9fd9990",
-      "items": ["8402fd25-5448-4d4e-8b4e-b5747fd4036d"],
+      "items": [
+        "8402fd25-5448-4d4e-8b4e-b5747fd4036d"
+      ],
       "total": 216350000,
       "status": "pending",
       "createdAt": "2024-06-11T01:01:54.470Z",
@@ -5267,6 +5484,238 @@
       "createdAt": 1746342741157,
       "updatedAt": 1746342741157,
       "id": "ybEfQVv"
+    },
+    {
+      "fullName": "Admin User",
+      "phone": "0987654321",
+      "email": "admin@gmail.com",
+      "province": "Thành phố Hà Nội",
+      "district": "Quận Ba Đình",
+      "address": "123",
+      "deliveryDate": "2025-05-15T17:00:00.000Z",
+      "deliveryTime": "08:00 - 12:00",
+      "items": [
+        {
+          "id": "0aebf87c-2276-413b-a980-64c9cd55f10b",
+          "productId": "0aebf87c-2276-413b-a980-64c9cd55f10b",
+          "name": "Nước giảm đau Dược phẩm 304",
+          "salePrice": 57860000,
+          "basePrice": 77150000,
+          "quantity": 1,
+          "images": [
+            {
+              "id": "d47b2a33-1481-4285-b012-8a534520874d",
+              "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341484/00032923-vien-uong-cai-thien-tim_1_b56yqn.png",
+              "alt": "Nước giảm đau Dược phẩm 304 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "id": "d5cb2a2f-1b17-46a1-95a1-9e8e675d750c",
+              "url": "https://picsum.photos/seed/209/500/500",
+              "alt": "Nước giảm đau Dược phẩm 304 - Hình chi tiết 1",
+              "isPrimary": false,
+              "sortOrder": 1
+            },
+            {
+              "id": "da4dab9a-ee66-4730-a520-0aba9eceb836",
+              "url": "https://picsum.photos/seed/490/500/500",
+              "alt": "Nước giảm đau Dược phẩm 304 - Hình chi tiết 2",
+              "isPrimary": false,
+              "sortOrder": 2
+            },
+            {
+              "id": "432eac0f-86a6-4dc8-9c66-356b04925ced",
+              "url": "https://picsum.photos/seed/293/500/500",
+              "alt": "Nước giảm đau Dược phẩm 304 - Hình chi tiết 3",
+              "isPrimary": false,
+              "sortOrder": 3
+            }
+          ],
+          "variant": ""
+        },
+        {
+          "id": "c87c0e37-0731-4b5f-93ed-d830fcf6fb12",
+          "productId": "c87c0e37-0731-4b5f-93ed-d830fcf6fb12",
+          "name": "Miếng dán da liễu Vimedimex Việt 477",
+          "salePrice": 48010000,
+          "basePrice": 55180000,
+          "quantity": 1,
+          "images": [
+            {
+              "id": "1ab4034c-5937-4cbd-82cd-3e251429fdc1",
+              "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341488/dsc-00535-480fad02f8_1_mxnxvw.png",
+              "alt": "Miếng dán da liễu Vimedimex Việt 477 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "id": "224e1842-37c8-44e5-bdc1-156712fc7517",
+              "url": "https://picsum.photos/seed/947/500/500",
+              "alt": "Miếng dán da liễu Vimedimex Việt 477 - Hình chi tiết 1",
+              "isPrimary": false,
+              "sortOrder": 1
+            }
+          ],
+          "variant": ""
+        }
+      ],
+      "userId": "7054f86e-cdc8-4e75-aad8-08c29eb159a7",
+      "paymentMethod": "cod",
+      "status": "pending",
+      "total": 105870000,
+      "createdAt": 1746687661201,
+      "updatedAt": 1746687661201,
+      "id": "AraOjCn"
+    },
+    {
+      "fullName": "Nguyễn Hoàng",
+      "phone": "0389173220",
+      "email": "huyhoang123@gmail.com",
+      "province": "Thành phố Hồ Chí Minh",
+      "district": "Quận Gò Vấp",
+      "address": "12 Nguyễn Văn Bảo Phường 4",
+      "deliveryDate": "2025-05-12T17:00:00.000Z",
+      "deliveryTime": "14:00 - 18:00",
+      "items": [
+        {
+          "id": "eb04c129-04bf-4521-ba14-a4acdb7bea93",
+          "productId": "eb04c129-04bf-4521-ba14-a4acdb7bea93",
+          "name": "Test thao tác cập nhật",
+          "salePrice": 16090000,
+          "basePrice": 19620000,
+          "quantity": 1,
+          "images": [
+            {
+              "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00503066-son-duong-moi-sebamed-l_iuf3kn.png",
+              "alt": "Dầu dinh dưỡng Vimedimex Việt 971 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "url": "https://res.cloudinary.com/dysjwopcc/image/upload/v1746687795/wzvkiqrygqf4fxbpqjho.png",
+              "alt": "Product image 2",
+              "isPrimary": false,
+              "sortOrder": 1
+            }
+          ],
+          "variant": ""
+        },
+        {
+          "id": "d5135942-9ed5-4106-8a72-bdc962bc1608",
+          "productId": "d5135942-9ed5-4106-8a72-bdc962bc1608",
+          "name": "Bột da liễu Dược phẩm 440",
+          "salePrice": 18840000,
+          "basePrice": 18840000,
+          "quantity": 1,
+          "images": [
+            {
+              "id": "8d7c39c5-b44e-4cd7-a2fc-d4f2200e34d5",
+              "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341489/img-9003-7e22ddc19e_1_czsgxg.png",
+              "alt": "Bột da liễu Dược phẩm 440 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "id": "04ff6ebc-28e7-49b7-857c-90b900cabcb5",
+              "url": "https://picsum.photos/seed/572/500/500",
+              "alt": "Bột da liễu Dược phẩm 440 - Hình chi tiết 1",
+              "isPrimary": false,
+              "sortOrder": 1
+            }
+          ],
+          "variant": ""
+        },
+        {
+          "id": "f10b71a1-7434-4422-80f8-cae099accc46",
+          "productId": "f10b71a1-7434-4422-80f8-cae099accc46",
+          "name": "Vitamin tim mạch Domesco 517",
+          "salePrice": 54020000,
+          "basePrice": 60020000,
+          "quantity": 1,
+          "images": [
+            {
+              "id": "8d9bd62a-ee00-43e0-9e5c-19fdbef4ada3",
+              "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341485/00503066-son-duong-moi-sebamed-l_iuf3kn.png",
+              "alt": "Vitamin tim mạch Domesco 517 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "id": "7ac9a7b7-e2df-462e-a0c0-da7abcbdf146",
+              "url": "https://picsum.photos/seed/486/500/500",
+              "alt": "Vitamin tim mạch Domesco 517 - Hình chi tiết 1",
+              "isPrimary": false,
+              "sortOrder": 1
+            }
+          ],
+          "variant": ""
+        }
+      ],
+      "userId": "5da74660-1382-4dec-b75d-df7fd1ab672d",
+      "paymentMethod": "transfer",
+      "status": "pending",
+      "total": 88950000,
+      "createdAt": 1746688105342,
+      "updatedAt": 1746688105342,
+      "id": "bT3yIG1"
+    },
+    {
+      "fullName": "Nguyễn Huy Hoàng",
+      "phone": "0389173220",
+      "email": "foxminer246@gmail.com",
+      "province": "Thành phố Hà Nội",
+      "district": "Quận Hoàn Kiếm",
+      "address": "123",
+      "deliveryDate": "2025-05-22T17:00:00.000Z",
+      "deliveryTime": "14:00 - 18:00",
+      "items": [
+        {
+          "id": "70f0be3c-d2e0-4a6b-8ffb-01f7e9662ce2",
+          "name": "Miếng dán tim mạch Pymepharco 154",
+          "salePrice": 39240000,
+          "basePrice": 42190000,
+          "quantity": 1,
+          "images": [
+            {
+              "id": "0c9e38e6-e86b-4ecc-9778-a38e6705c426",
+              "url": "https://res.cloudinary.com/dbmtxumro/image/upload/v1746341495/00031920-top-grow-jpanwell-10-ch_vogxfu.png",
+              "alt": "Miếng dán tim mạch Pymepharco 154 - Sản phẩm",
+              "isPrimary": true,
+              "sortOrder": 0
+            },
+            {
+              "id": "512213a7-48bd-4e26-a108-64776ce12212",
+              "url": "https://picsum.photos/seed/250/500/500",
+              "alt": "Miếng dán tim mạch Pymepharco 154 - Hình chi tiết 1",
+              "isPrimary": false,
+              "sortOrder": 1
+            },
+            {
+              "id": "c5371312-6d33-488a-824a-128df04703eb",
+              "url": "https://picsum.photos/seed/996/500/500",
+              "alt": "Miếng dán tim mạch Pymepharco 154 - Hình chi tiết 2",
+              "isPrimary": false,
+              "sortOrder": 2
+            },
+            {
+              "id": "b307ab3c-4bcc-4691-88a4-d5a18479a7af",
+              "url": "https://picsum.photos/seed/730/500/500",
+              "alt": "Miếng dán tim mạch Pymepharco 154 - Hình chi tiết 3",
+              "isPrimary": false,
+              "sortOrder": 3
+            }
+          ],
+          "variant": ""
+        }
+      ],
+      "userId": "Khách vãng lai",
+      "paymentMethod": "transfer",
+      "status": "pending",
+      "total": 39240000,
+      "createdAt": 1746689689674,
+      "updatedAt": 1746689689674,
+      "id": "CZCQ8G6"
     }
   ],
   "orderItems": [
@@ -5813,11 +6262,51 @@
   ],
   "tokens": [
     {
-      "id": "aa4da333-4194-4846-ae4c-f3cb1cb7ab93",
+      "id": "e18c7d3d-9887-48ce-89ef-d66008208b9a",
       "userId": "7054f86e-cdc8-4e75-aad8-08c29eb159a7",
-      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNTRmODZlLWNkYzgtNGU3NS1hYWQ4LTA4YzI5ZWIxNTlhNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NjM0MjM0NywiZXhwIjoxNzQ2MzQ1OTQ3fQ.8v07n8TMsM8ManUYnWR9BolQ0IlgCixOeJ2ent8nr-0",
-      "createdAt": "2025-05-04T14:05:47.203Z",
-      "expiresAt": "2025-05-04T15:05:47.203Z",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNTRmODZlLWNkYzgtNGU3NS1hYWQ4LTA4YzI5ZWIxNTlhNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NjY4NzU5MSwiZXhwIjoxNzQ2NjkxMTkxfQ.GW8yXDAVTbEEkVBPgrcr_KTB8wGIO4CE9qiZgVel_UU",
+      "createdAt": "2025-05-08T13:59:51.399Z",
+      "expiresAt": "2025-05-08T14:59:51.399Z",
+      "isValid": true
+    },
+    {
+      "id": "59ae4474-2faf-4f2b-93a4-615e73688170",
+      "userId": "7054f86e-cdc8-4e75-aad8-08c29eb159a7",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNTRmODZlLWNkYzgtNGU3NS1hYWQ4LTA4YzI5ZWIxNTlhNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NjY4Nzc2NCwiZXhwIjoxNzQ2NjkxMzY0fQ.OXfP1JJlPdUj_FWKFFwp8C6NGUYuhp47GkblXqifskc",
+      "createdAt": "2025-05-08T14:02:44.311Z",
+      "expiresAt": "2025-05-08T15:02:44.311Z",
+      "isValid": true
+    },
+    {
+      "id": "285ab785-7fe4-4d0c-8f4e-d530b5e7aab2",
+      "userId": "5da74660-1382-4dec-b75d-df7fd1ab672d",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTc0NjYwLTEzODItNGRlYy1iNzVkLWRmN2ZkMWFiNjcyZCIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjY4ODAyMSwiZXhwIjoxNzQ2NjkxNjIxfQ.IaDKj59miREMpYzbQgECKcCGt6roZ7DAgtKbDRXtbwU",
+      "createdAt": "2025-05-08T14:07:01.820Z",
+      "expiresAt": "2025-05-08T15:07:01.820Z",
+      "isValid": true
+    },
+    {
+      "id": "fc7a1583-6e9b-470d-b8f2-dfff5187a9b4",
+      "userId": "5da74660-1382-4dec-b75d-df7fd1ab672d",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkYTc0NjYwLTEzODItNGRlYy1iNzVkLWRmN2ZkMWFiNjcyZCIsInJvbGUiOiJjdXN0b21lciIsImlhdCI6MTc0NjY4ODI2MCwiZXhwIjoxNzQ2NjkxODYwfQ.r5XA0o84YOZ7AIQzXtChTLPH5VG7hCLn1FBGeur8-cc",
+      "createdAt": "2025-05-08T14:11:00.922Z",
+      "expiresAt": "2025-05-08T15:11:00.922Z",
+      "isValid": true
+    },
+    {
+      "id": "d13eef59-36ce-4653-ab9f-8545a67f7185",
+      "userId": "7054f86e-cdc8-4e75-aad8-08c29eb159a7",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNTRmODZlLWNkYzgtNGU3NS1hYWQ4LTA4YzI5ZWIxNTlhNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NjY4ODU5OCwiZXhwIjoxNzQ2NjkyMTk4fQ.p-8-uOefaKs98HfRFfE08MlIFryopYIYGKSKhnYYeew",
+      "createdAt": "2025-05-08T14:16:38.657Z",
+      "expiresAt": "2025-05-08T15:16:38.657Z",
+      "isValid": true
+    },
+    {
+      "id": "61517f3e-4795-4016-9089-ebe3667fae5b",
+      "userId": "7054f86e-cdc8-4e75-aad8-08c29eb159a7",
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcwNTRmODZlLWNkYzgtNGU3NS1hYWQ4LTA4YzI5ZWIxNTlhNyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc0NjY4OTM4NCwiZXhwIjoxNzQ2NjkyOTg0fQ.jGyXnzDNxJJnY5JmVmftG5crTR7fIDvxUlgu3UN6cjs",
+      "createdAt": "2025-05-08T14:29:44.301Z",
+      "expiresAt": "2025-05-08T15:29:44.300Z",
       "isValid": true
     }
   ],
