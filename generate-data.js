@@ -13,15 +13,11 @@ const roundToNearest10k = (number) => {
 
 // Helper function to get price range
 const getPriceRange = (price) => {
-  if (price < 1000000) return "Dưới 1 triệu";
-  if (price < 2000000) return "1 triệu - 2 triệu";
-  if (price < 3000000) return "2 triệu - 3 triệu";
-  if (price < 4000000) return "3 triệu - 4 triệu";
-  if (price < 5000000) return "4 triệu - 5 triệu";
-  if (price < 10000000) return "5 triệu - 10 triệu";
-  if (price < 20000000) return "10 triệu - 20 triệu";
-  if (price < 50000000) return "20 triệu - 50 triệu";
-  return "Trên 50 triệu";
+  if (price < 100000) return "Dưới 100.000đ";
+  if (price < 200000) return "100.000đ - 200.000đ";
+  if (price < 300000) return "200.000đ - 300.000đ";
+  if (price < 500000) return "300.000đ - 500.000đ";
+  return "Trên 500.000đ";
 };
 
 // Array of real product images from Cloudinary to be used for both products and categories
@@ -201,22 +197,32 @@ const fetchProvincesAndDistricts = async () => {
   try {
     const [provincesResponse, districtsResponse] = await Promise.all([
       fetch("https://provinces.open-api.vn/api/p"),
-      fetch("https://provinces.open-api.vn/api/d")
+      fetch("https://provinces.open-api.vn/api/d"),
     ]);
-    
+
     const provinces = await provincesResponse.json();
     const districts = await districtsResponse.json();
-    
+
     return {
-      provinces: provinces.map(p => ({ id: p.code, name: p.name })),
-      districts: districts.map(d => ({ id: d.code, name: d.name, provinceId: d.province_code }))
+      provinces: provinces.map((p) => ({ id: p.code, name: p.name })),
+      districts: districts.map((d) => ({
+        id: d.code,
+        name: d.name,
+        provinceId: d.province_code,
+      })),
     };
   } catch (error) {
     console.error("Failed to fetch provinces/districts:", error);
     // Fallback to some default data if API fails
     return {
-      provinces: [{ id: 1, name: "Tỉnh Hà Nội" }, { id: 2, name: "Tỉnh TP. Hồ Chí Minh" }],
-      districts: [{ id: 1, name: "Quận Hoàn Kiếm", provinceId: 1 }, { id: 2, name: "Quận 1", provinceId: 2 }]
+      provinces: [
+        { id: 1, name: "Tỉnh Hà Nội" },
+        { id: 2, name: "Tỉnh TP. Hồ Chí Minh" },
+      ],
+      districts: [
+        { id: 1, name: "Quận Hoàn Kiếm", provinceId: 1 },
+        { id: 2, name: "Quận 1", provinceId: 2 },
+      ],
     };
   }
 };
@@ -226,7 +232,7 @@ const generatePharmacyUsers = async (count) => {
   const users = [];
   const carts = []; // Initialize carts array
   const favourites = []; // Initialize favourites array
-  
+
   // Fetch provinces and districts from API
   const { provinces, districts } = await fetchProvincesAndDistricts();
 
@@ -329,10 +335,13 @@ const generatePharmacyUsers = async (count) => {
     // Get random province and district
     const province = faker.helpers.arrayElement(provinces);
     // Get districts that belong to the selected province, or any district if relation not found
-    const matchingDistricts = districts.filter(d => d.provinceId === province.id);
-    const district = matchingDistricts.length > 0 
-      ? faker.helpers.arrayElement(matchingDistricts) 
-      : faker.helpers.arrayElement(districts);
+    const matchingDistricts = districts.filter(
+      (d) => d.provinceId === province.id
+    );
+    const district =
+      matchingDistricts.length > 0
+        ? faker.helpers.arrayElement(matchingDistricts)
+        : faker.helpers.arrayElement(districts);
 
     const role = faker.helpers.arrayElement([
       "customer",
@@ -501,16 +510,18 @@ const generatePharmacyProducts = (count, categories, suppliers, brands) => {
       ? faker.number.int({ min: 5, max: 25 })
       : null;
     const maxDiscountAmount = discountValue
-      ? faker.number.int({ min: 500000, max: 2000000 })
+      ? faker.number.int({ min: 10000, max: 20000 })
       : null;
 
+    // Updated price range to be between 50,000 and 500,000 VND
     const basePrice = roundToNearest10k(
-      faker.number.int({ min: 20000, max: 100000000 })
+      faker.number.int({ min: 50000, max: 1000000 })
     );
     const salePrice = discountValue
       ? roundToNearest10k(basePrice * (1 - discountValue / 100))
       : basePrice; // Set salePrice to basePrice if no discount
 
+    // Updated cost calculation to be appropriate for the new price range
     const cost = roundToNearest10k(
       faker.number.int({ min: 20000, max: basePrice })
     );
@@ -534,15 +545,17 @@ const generatePharmacyProducts = (count, categories, suppliers, brands) => {
     // Generate product images, using Cloudinary URL for the primary image
     const primaryImageUrl = faker.helpers.arrayElement(cloudinaryProductImages);
     const imagesCount = faker.number.int({ min: 1, max: 4 });
-    
-    const images = [{
-      id: generateId(),
-      url: primaryImageUrl,
-      alt: `${productName} - Sản phẩm`,
-      isPrimary: true,
-      sortOrder: 0
-    }];
-    
+
+    const images = [
+      {
+        id: generateId(),
+        url: primaryImageUrl,
+        alt: `${productName} - Sản phẩm`,
+        isPrimary: true,
+        sortOrder: 0,
+      },
+    ];
+
     // Add additional images if needed
     if (imagesCount > 1) {
       const additionalImages = Array.from(
@@ -585,15 +598,13 @@ const generatePharmacyProducts = (count, categories, suppliers, brands) => {
       supplierId: supplier.id,
       brand: brand,
       images: images,
+      // Updated variants to remove price property
       variants: Array.from(
         { length: faker.number.int({ min: 0, max: 2 }) },
         () => ({
           id: generateId(),
           name: `${material} - Loại ${faker.number.int(100)}`,
           sku: `DOLA-${faker.string.alphanumeric(10).toUpperCase()}`,
-          price: roundToNearest10k(
-            faker.number.int({ min: 20000, max: 500000 })
-          ),
           stock: faker.number.int({ min: 0, max: 100 }),
         })
       ),
@@ -712,7 +723,7 @@ const generateData = async () => {
   const suppliers = generatePharmacySuppliers(10);
   const { users, carts, favourites } = await generatePharmacyUsers(30); // Destructure favourites
   const brands = []; // Initialize brands array
-  const products = generatePharmacyProducts(40, categories, suppliers, brands);
+  const products = generatePharmacyProducts(60, categories, suppliers, brands);
   const { orders, orderItems } = generateOrders(20, users, products);
 
   // Calculate total products for each category
