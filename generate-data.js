@@ -192,49 +192,11 @@ const generatePharmacySuppliers = (count) => {
   return suppliers;
 };
 
-// Fetch provinces and districts data from API
-const fetchProvincesAndDistricts = async () => {
-  try {
-    const [provincesResponse, districtsResponse] = await Promise.all([
-      fetch("https://provinces.open-api.vn/api/p"),
-      fetch("https://provinces.open-api.vn/api/d"),
-    ]);
-
-    const provinces = await provincesResponse.json();
-    const districts = await districtsResponse.json();
-
-    return {
-      provinces: provinces.map((p) => ({ id: p.code, name: p.name })),
-      districts: districts.map((d) => ({
-        id: d.code,
-        name: d.name,
-        provinceId: d.province_code,
-      })),
-    };
-  } catch (error) {
-    console.error("Failed to fetch provinces/districts:", error);
-    // Fallback to some default data if API fails
-    return {
-      provinces: [
-        { id: 1, name: "Tỉnh Hà Nội" },
-        { id: 2, name: "Tỉnh TP. Hồ Chí Minh" },
-      ],
-      districts: [
-        { id: 1, name: "Quận Hoàn Kiếm", provinceId: 1 },
-        { id: 2, name: "Quận 1", provinceId: 2 },
-      ],
-    };
-  }
-};
-
 // Generate pharmacy users with Vietnamese names and locations
 const generatePharmacyUsers = async (count) => {
   const users = [];
   const carts = []; // Initialize carts array
   const favourites = []; // Initialize favourites array
-
-  // Fetch provinces and districts from API
-  const { provinces, districts } = await fetchProvincesAndDistricts();
 
   // Always add admin user first
   const adminUser = {
@@ -248,17 +210,7 @@ const generatePharmacyUsers = async (count) => {
     role: "admin",
     verificationStatus: "verified",
     lastLogin: faker.date.recent().toISOString(),
-    addresses: [
-      {
-        type: "shipping",
-        isPrimary: true,
-        street: "123",
-        city: provinces.length > 0 ? provinces[0].name : "Tỉnh Hà Giang",
-        state: districts.length > 0 ? districts[0].name : "Quận Hoàn Kiếm",
-        country: "Việt Nam",
-        phone: "0987654321",
-      },
-    ],
+    addresses: [], // Empty addresses array
     createdAt: faker.date.past({ years: 2 }).toISOString(),
     updatedAt: faker.date.recent().toISOString(),
   };
@@ -278,6 +230,43 @@ const generatePharmacyUsers = async (count) => {
   favourites.push({
     id: generateId(),
     userId: adminUser.id,
+    items: [],
+    createdAt: faker.date.past({ years: 1 }).toISOString(),
+    updatedAt: faker.date.recent().toISOString(),
+  });
+
+  // Add a default customer user
+  const customerUser = {
+    id: generateId(),
+    email: "foxminer246@gmail.com",
+    passwordHash: await bcrypt.hash("123456789", 10),
+    firstName: "Customer",
+    lastName: "User",
+    phone: "0912345678",
+    dateOfBirth: "1995-05-15",
+    role: "customer",
+    verificationStatus: "verified",
+    lastLogin: faker.date.recent().toISOString(),
+    addresses: [],
+    createdAt: faker.date.past({ years: 1 }).toISOString(),
+    updatedAt: faker.date.recent().toISOString(),
+  };
+
+  users.push(customerUser);
+
+  // Generate a cart for the customer user
+  carts.push({
+    id: generateId(),
+    userId: customerUser.id,
+    items: [],
+    createdAt: faker.date.past({ years: 1 }).toISOString(),
+    updatedAt: faker.date.recent().toISOString(),
+  });
+
+  // Generate a favourites list for the customer user
+  favourites.push({
+    id: generateId(),
+    userId: customerUser.id,
     items: [],
     createdAt: faker.date.past({ years: 1 }).toISOString(),
     updatedAt: faker.date.recent().toISOString(),
@@ -332,17 +321,6 @@ const generatePharmacyUsers = async (count) => {
     const firstName = faker.helpers.arrayElement(vietnameseFirstNames);
     const fullName = `${lastName} ${firstName}`;
 
-    // Get random province and district
-    const province = faker.helpers.arrayElement(provinces);
-    // Get districts that belong to the selected province, or any district if relation not found
-    const matchingDistricts = districts.filter(
-      (d) => d.provinceId === province.id
-    );
-    const district =
-      matchingDistricts.length > 0
-        ? faker.helpers.arrayElement(matchingDistricts)
-        : faker.helpers.arrayElement(districts);
-
     const role = faker.helpers.arrayElement([
       "customer",
       "customer",
@@ -373,18 +351,7 @@ const generatePharmacyUsers = async (count) => {
           ? "verified"
           : faker.helpers.arrayElement(["unverified", "pending", "verified"]),
       lastLogin: faker.date.recent().toISOString(),
-      addresses: Array.from(
-        { length: faker.number.int({ min: 1, max: 3 }) },
-        () => ({
-          type: faker.helpers.arrayElement(["shipping", "billing"]),
-          isPrimary: faker.datatype.boolean(),
-          street: faker.string.numeric(3),
-          city: province.name,
-          state: district.name,
-          country: "Việt Nam",
-          phone: `0${faker.string.numeric(9)}`,
-        })
-      ),
+      addresses: [], // Empty addresses array
       createdAt: faker.date.past({ years: 2 }).toISOString(),
       updatedAt: faker.date.recent().toISOString(),
     };
@@ -428,6 +395,15 @@ const generatePharmacyProducts = (count, categories, suppliers, brands) => {
       basePrice - (basePrice * discount.value) / 100,
       basePrice - discount.maxDiscountAmount || 0
     );
+  };
+
+  // Helper function to get random images for description
+  const getRandomDescriptionImages = (count) => {
+    const images = [];
+    for (let i = 0; i < count; i++) {
+      images.push(faker.helpers.arrayElement(cloudinaryImages));
+    }
+    return images;
   };
 
   // Array of real product images from Cloudinary
@@ -571,6 +547,11 @@ const generatePharmacyProducts = (count, categories, suppliers, brands) => {
       images.push(...additionalImages);
     }
 
+    // Get 1-2 random images for the description
+    const descriptionImages = getRandomDescriptionImages(
+      faker.number.int({ min: 1, max: 2 })
+    );
+
     const product = {
       id: generateId(),
       name: productName,
@@ -616,6 +597,11 @@ const generatePharmacyProducts = (count, categories, suppliers, brands) => {
         lastRestocked: faker.date.recent().toISOString(),
       },
       description: `<h3>Thông tin sản phẩm ${productName}</h3>
+<div class="product-image-container">
+  <img src="${
+    descriptionImages[0]
+  }" alt="${productName}" class="product-detail-image" />
+</div>
 <p><strong>Công dụng:</strong> Sản phẩm ${productName} giúp điều trị các vấn đề sức khỏe liên quan đến ${material}. Sử dụng đúng liều lượng để đạt hiệu quả tốt nhất.</p>
 <p><strong>Đặc điểm nổi bật:</strong></p>
 <ul>
@@ -634,6 +620,13 @@ const generatePharmacyProducts = (count, categories, suppliers, brands) => {
     "người cao tuổi",
   ])}</li>
 </ul>
+${
+  descriptionImages[1]
+    ? `<div class="product-image-container">
+  <img src="${descriptionImages[1]}" alt="${productName} - Chi tiết" class="product-detail-image" />
+</div>`
+    : ""
+}
 <p><em>Lưu ý: Đọc kỹ hướng dẫn sử dụng trước khi dùng. Bảo quản nơi khô ráo, thoáng mát, tránh ánh nắng trực tiếp.</em></p>`,
       ingredients: `Thành phần chính: ${faker.lorem.words(5)}`,
       dosage: `Liều dùng: ${faker.number.int({
@@ -665,53 +658,6 @@ const generatePharmacyProducts = (count, categories, suppliers, brands) => {
   return products;
 };
 
-// Generate orders and orderItems with Vietnamese content
-const generateOrders = (count, users, products) => {
-  const orders = [];
-  const orderItems = [];
-
-  for (let i = 0; i < count; i++) {
-    const user = faker.helpers.arrayElement(
-      users.filter((u) => u.role === "customer")
-    );
-    const orderId = generateId();
-    const itemsCount = faker.number.int({ min: 1, max: 5 });
-
-    const items = Array.from({ length: itemsCount }, () => {
-      const product = faker.helpers.arrayElement(products);
-      const quantity = faker.number.int({ min: 1, max: 5 });
-      const price = product.salePrice || product.basePrice;
-
-      const orderItem = {
-        id: generateId(),
-        orderId,
-        productId: product.id,
-        productName: product.name,
-        quantity,
-        price: price,
-        total: quantity * price,
-      };
-
-      orderItems.push(orderItem);
-      return orderItem;
-    });
-
-    const order = {
-      id: orderId,
-      userId: user.id,
-      items: items.map((item) => item.id),
-      total: items.reduce((sum, item) => sum + item.total, 0),
-      status: faker.helpers.arrayElement(["pending", "completed", "cancelled"]),
-      createdAt: faker.date.past({ years: 1 }).toISOString(),
-      updatedAt: faker.date.recent().toISOString(),
-    };
-
-    orders.push(order);
-  }
-
-  return { orders, orderItems };
-};
-
 // Main function to generate all data
 const generateData = async () => {
   const dbFilePath = "db.json";
@@ -724,7 +670,7 @@ const generateData = async () => {
   const { users, carts, favourites } = await generatePharmacyUsers(30); // Destructure favourites
   const brands = []; // Initialize brands array
   const products = generatePharmacyProducts(60, categories, suppliers, brands);
-  const { orders, orderItems } = generateOrders(20, users, products);
+  // Removed order generation
 
   // Calculate total products for each category
   categories.forEach((category) => {
@@ -740,8 +686,7 @@ const generateData = async () => {
     users,
     carts, // Include carts in the output
     favourites, // Include favourites in the output
-    orders,
-    orderItems,
+    // Removed orders and orderItems
     brands, // Include brands in the output
     prescriptions: [],
     reviews: [],
