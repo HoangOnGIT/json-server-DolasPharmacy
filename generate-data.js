@@ -691,6 +691,7 @@ const generateData = async () => {
     prescriptions: [],
     reviews: [],
     wishlist: [],
+    orders: [], // Add empty orders array
   };
 
   // Write to db.json
